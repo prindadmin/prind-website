@@ -11,13 +11,13 @@ let featuresOne = [
   {
     title: Strings.FEATURE_PROJECT_ASSURANCE_TITLE,
     subtitle: Strings.FEATURE_PROJECT_ASSURANCE_SUBTITLE,
-    iconName: "flag",
+    iconName: "broadcastTower",
     description: Strings.FEATURE_PROJECT_ASSURANCE_DESCRIPTION,
   },
   {
     title: Strings.FEATURE_PROJECT_ASSURANCE_TITLE,
     subtitle: Strings.FEATURE_PROJECT_ASSURANCE_SUBTITLE,
-    iconName: "flag",
+    iconName: "landmark",
     description: Strings.FEATURE_PROJECT_ASSURANCE_DESCRIPTION,
   }
 ]

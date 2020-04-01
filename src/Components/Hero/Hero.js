@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-// TODO: Add Image overlay to darken it
-// TODO: Remove gap between hero and next block caused by text positioning
+// TODO: Add prop to accept an array of images and have them rotate through
 
 export class Hero extends Component {
 static propTypes = {
@@ -22,6 +21,7 @@ static propTypes = {
 
     const defaultImage = imageLocation + imageName + "_1920" + fileType
 
+    /*
     const srcSet =  imageLocation + imageName + "_480" + fileType + " 480w, " +
                     imageLocation + imageName + "_640" + fileType + " 640w, " +
                     imageLocation + imageName + "_960" + fileType + " 960w, " +
@@ -29,10 +29,10 @@ static propTypes = {
                     imageLocation + imageName + "_1920" + fileType + " 1920w"
 
     const sizes = "(max-width: 480px) 100vw, (max-width: 640px) 100vw, (max-width: 960px) 100vw, (max-width: 1280px) 100vw, 100vw"
+    */
 
     return (
-      <div className="next visible">
-        <img srcSet={srcSet} sizes={sizes} src={defaultImage} alt='Hero' />
+      <div style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${defaultImage})`}} className="fill fill-parent">
       </div>
     )
 
@@ -44,7 +44,7 @@ static propTypes = {
 
     return (
       <div id='component-hero' className='full-width'>
-        <div className='image-container'>
+        <div className='image-container full-height full-width'>
           {
             this.getHeroImage()
           }
