@@ -1,3 +1,12 @@
+/* Grid system */
+@import "~bootstrap/dist/css/bootstrap-grid.min.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --header-bar-height: 75px;
+  --footer-bar-height: 75px;
+}
+
 .App {
   text-align: center;
 }
@@ -28,11 +37,56 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fill-parent {
+  height: 100%;
+  width: 100%;
+}
+
+.flex-center-content {
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================ */
+/* ========= Hero section ========= */
+/* ================================ */
+
+#component-hero {
+  height: 100vh;
+  background-color: #DCDCDC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#component-hero .image-container {
+
+}
+
+#component-hero .text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* =========================================== */
+/* ========= Feature Circles section ========= */
+/* =========================================== */
+
+#component-feature-circles {
+  padding: 2em 0;
+}
+
+#component-feature-circle {
+  padding-top: 2em;
 }
