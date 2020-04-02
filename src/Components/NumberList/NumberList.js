@@ -31,10 +31,10 @@ export class NumberList extends Component {
 
     return (
       <div id='component-number-list' className='row' style={componentStyle}>
-        <div className='component-number-list-container flex-center-content'>
+        <div className='component-number-list-container flex-center-content row'>
           {
             items.map((numberDetails, index) => (
-              <div key={index} className="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <div key={index} className="col-xl-2 col-lg-4 col-md-6 col-sm-12">
                 <Fade bottom distance="40px">
                   <SingleNumberTile
                     headlineNumber={index + 1}
