@@ -44,8 +44,8 @@ export class FeatureCircle extends Component {
             {ico}
           </span>
         </div>
-        <h1>{title}</h1>
-        <h3>{subtitle}</h3>
+        <h2>{title}</h2>
+        <h4>{subtitle}</h4>
         <p>{description}</p>
       </div>
     )

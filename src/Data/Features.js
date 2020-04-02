@@ -5,21 +5,21 @@ let featuresOne = [
   {
     title: Strings.FEATURE_PROJECT_ASSURANCE_TITLE,
     subtitle: Strings.FEATURE_PROJECT_ASSURANCE_SUBTITLE,
-    iconName: "flag",
+    iconName: "checkDouble",
     description: Strings.FEATURE_PROJECT_ASSURANCE_DESCRIPTION,
   },
   {
-    title: Strings.FEATURE_PROJECT_ASSURANCE_TITLE,
-    subtitle: Strings.FEATURE_PROJECT_ASSURANCE_SUBTITLE,
+    title: Strings.FEATURE_DIGITAL_RECORD_TITLE,
+    subtitle: Strings.FEATURE_DIGITAL_RECORD_SUBTITLE,
+    iconName: "fileAlt",
+    description: Strings.FEATURE_DIGITAL_RECORD_DESCRIPTION,
+  },
+  {
+    title: Strings.FEATURE_SINGLE_LOCATION_TITLE,
+    subtitle: Strings.FEATURE_SINGLE_LOCATION_SUBTITLE,
     iconName: "broadcastTower",
-    description: Strings.FEATURE_PROJECT_ASSURANCE_DESCRIPTION,
+    description: Strings.FEATURE_SINGLE_LOCATION_DESCRIPTION,
   },
-  {
-    title: Strings.FEATURE_PROJECT_ASSURANCE_TITLE,
-    subtitle: Strings.FEATURE_PROJECT_ASSURANCE_SUBTITLE,
-    iconName: "landmark",
-    description: Strings.FEATURE_PROJECT_ASSURANCE_DESCRIPTION,
-  }
 ]
 
 let numbersListOne = [

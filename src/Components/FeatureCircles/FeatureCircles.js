@@ -50,12 +50,14 @@ export class FeatureCircles extends Component {
 
     return (
       <div id='component-feature-circles' style={componentStyle}>
-        <h1>{title}</h1>
-        <h3>{subtitle}</h3>
-        <div className='feature-circles row flex-center-content'>
-          {
-            this.getFeatureCircles()
-          }
+        <div className='component-feature-circles-container'>
+          <h1>{title}</h1>
+          <h4>{subtitle}</h4>
+          <div className='feature-circles row'>
+            {
+              this.getFeatureCircles()
+            }
+          </div>
         </div>
       </div>
     )

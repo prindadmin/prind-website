@@ -55,10 +55,12 @@ import {
   faBroadcastTower,
   faCircle,
   faLandmark,
+  faCheckDouble,
 } from '@fortawesome/free-solid-svg-icons'
 
 import {
   faFlag,
+  faFileAlt,
 } from '@fortawesome/free-regular-svg-icons'
 
 import {
@@ -75,6 +77,8 @@ let icons = {
   landmark: faLandmark,
   flag: faFlag,
   circle: faCircle,
+  fileAlt: faFileAlt,
+  checkDouble: faCheckDouble,
 }
 
 const ItemIcon = props => {
