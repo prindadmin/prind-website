@@ -32,13 +32,15 @@ export class FeatureCircle extends Component {
     const { title, subtitle, iconName, description } = this.props.details
 
     const ico  = <ItemIcon size='4x' icon={iconName} color='white'/>
-    const circle  = <ItemIcon className='shadow' size='8x' icon='circle' color={defaultColour}/>
+    const circle  = <ItemIcon size='8x' icon='circle' color={defaultColour}/>
 
     return (
       <div id='component-feature-circle' className='col-xl-4 col-lg-6 col-md-12'>
         <div className='circle-container'>
           <span className="fa-layers fill-parent">
-            {circle}
+            <div className="shadow">
+              {circle}
+            </div>
             {ico}
           </span>
         </div>

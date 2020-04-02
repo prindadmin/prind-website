@@ -6,6 +6,8 @@ const FADE_IN_DISTANCE = 400
 
 // Components
 
+// TODO: Change to logo icon when width is small
+// TODO: Change menu to icon when width is small
 // TODO: Get the links on the right hand side (when we have some)
 
 export class HeaderBar extends Component {

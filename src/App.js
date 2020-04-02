@@ -7,9 +7,12 @@ import LandingPage from './Pages/LandingPage'
 
 // Component Imports
 import HeaderBar from './Components/HeaderBar'
+import FooterBar from './Components/FooterBar'
 
 // Data Import
 import * as Strings from './Data/Strings'
+
+// TODO: Fork and fix react-reveal
 
 class App extends Component {
 
@@ -26,6 +29,7 @@ class App extends Component {
               <Route exact path='/' component={ LandingPage } />
               <Route component={ LandingPage } />
             </Switch>
+            <FooterBar />
           </div>
         </div>
       </Router>

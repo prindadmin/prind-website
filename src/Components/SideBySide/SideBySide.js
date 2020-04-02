@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+// Tools
+import Fade from 'react-reveal/Fade';
+
 // leftCols = width of left side (out of 12)
 // rightCols = width of right side (out of 12)
 // leftCols + rightCols must equal 12
@@ -14,9 +17,6 @@ static propTypes = {
   rightSide: PropTypes.func.isRequired,
 }
 
-  componentDidMount () {
-  }
-
   render () {
 
     const { leftCols, rightCols, backgroundColor, leftSide, rightSide } = this.props
@@ -26,7 +26,6 @@ static propTypes = {
     if (backgroundColor !== null) {
       componentStyle = { backgroundColor: backgroundColor }
     }
-
 
     var leftColsChecked = leftCols
     var rightColsChecked = rightCols
@@ -38,15 +37,19 @@ static propTypes = {
     }
 
     return (
-      <div id='component-side-by-side' className='full-width row' style={componentStyle}>
+      <div id='component-side-by-side' className='row' style={componentStyle}>
         <div className="component-side-by-side-container row">
-          <div className={`left-side-container col-${leftColsChecked}`}>
-            {leftSide()}
-          </div>
+          <Fade left distance="20px">
+            <div className={`left-side-container col-md-${leftColsChecked} col-sm-12`}>
+              {leftSide()}
+            </div>
+          </Fade>
 
-          <div className={`right-side-container col-${rightColsChecked}`}>
-            {rightSide()}
-          </div>
+          <Fade right distance="20px">
+            <div className={`right-side-container col-md-${rightColsChecked} col-sm-12`}>
+              {rightSide()}
+            </div>
+          </Fade>
 
         </div>
       </div>

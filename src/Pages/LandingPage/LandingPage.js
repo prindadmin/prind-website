@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 
 import * as Strings from '../../Data/Strings'
 import {
-  featuresOne
+  featuresOne,
+  numbersListOne,
+  headlineNumbersOne,
 } from '../../Data/Features'
 
 // Components
 import HeroSection from '../../Components/Hero'
 import FeatureCircles from '../../Components/FeatureCircles'
 import SideBySide from '../../Components/SideBySide'
+import NumberList from '../../Components/NumberList'
+import HeadlineNumbers from '../../Components/HeadlineNumbers'
 
 export class LandingPage extends Component {
 
@@ -70,12 +74,20 @@ export class LandingPage extends Component {
           leftSide={ this.getSideBySideOneLeft }
           rightSide={ this.getSideBySideOneRight }
         />
-        <SideBySide
+        <HeadlineNumbers
           backgroundColor={ "#F0F0F0" }
+          items={ headlineNumbersOne }
+        />
+        <SideBySide
+          backgroundColor={ "#FFF" }
           leftCols={ 6 }
           rightCols={ 6 }
           leftSide={ this.getSideBySideTwoLeft }
           rightSide={ this.getSideBySideTwoRight }
+        />
+        <NumberList
+          backgroundColor={ "#F0F0F0" }
+          items={ numbersListOne }
         />
       </div>
     )

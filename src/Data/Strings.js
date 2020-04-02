@@ -15,3 +15,14 @@ export const SIDEBYSIDE_ONE_SUBTITLE = ""
 
 export const SIDEBYSIDE_TWO_TITLE = "Another Side By Side"
 export const SIDEBYSIDE_TWO_SUBTITLE = ""
+
+export const NUMBER_LIST_ONE_ONE_TITLE = "Some title 1"
+export const NUMBER_LIST_ONE_ONE_DESCRIPTION = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+export const NUMBER_LIST_ONE_TWO_TITLE = "Some title 2"
+export const NUMBER_LIST_ONE_TWO_DESCRIPTION = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+export const HEADLINE_NUMBER_ONE_ONE_DESCRIPTION = "Projects Completed"
+export const HEADLINE_NUMBER_ONE_TWO_DESCRIPTION = "Technical Partners"
+
+export const COPYRIGHT_TEXT = "Copyright © 2020 PrinD Technology Ltd"
