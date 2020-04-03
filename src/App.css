@@ -6,7 +6,7 @@
   --header-bar-height: 100px;
   --footer-bar-height: 125px;
   --standard-padding: 5em 3em;
-  --standard-max-width: 1200px;
+  --standard-max-width: 1400px;
   --number-list-headline-font-color: #194174;
   --headline-number-font-color: #19744d;
 }
@@ -45,6 +45,10 @@ h4 {
   font-size: 1.3em;
 }
 
+p {
+  margin-bottom: 2em;
+}
+
 /* ================================== */
 /* ======= Header Bar section ======= */
 /* ================================== */
@@ -70,6 +74,9 @@ h4 {
   color: white;
 }
 
+#header-bar h1 {
+  font-size: 30px;
+}
 
 /* ================================ */
 /* ========= Hero section ========= */
@@ -184,12 +191,28 @@ h4 {
 }
 
 #component-number-list .title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+#component-number-list .items .title {
   font-size: 1.3em;
+  font-weight: normal;
   margin-bottom: 0.8em;
 }
 
 #component-number-list .description {
 
+}
+
+#component-number-list .items {
+  justify-content: center;
+  margin: auto;
+}
+
+#component-number-list .item {
+  margin-bottom: 2em;
 }
 
 /* ======================================= */
@@ -226,7 +249,6 @@ h4 {
 #component-headline-numbers .description {
 
 }
-
 
 /* ================================== */
 /* ======= Footer Bar section ======= */

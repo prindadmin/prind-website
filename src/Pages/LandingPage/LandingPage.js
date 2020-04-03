@@ -4,7 +4,7 @@ import * as Strings from '../../Data/Strings'
 import {
   featuresOne,
   numbersListOne,
-  headlineNumbersOne,
+  //headlineNumbersOne,
 } from '../../Data/Features'
 
 // Components
@@ -12,14 +12,14 @@ import HeroSection from '../../Components/Hero'
 import FeatureCircles from '../../Components/FeatureCircles'
 import SideBySide from '../../Components/SideBySide'
 import NumberList from '../../Components/NumberList'
-import HeadlineNumbers from '../../Components/HeadlineNumbers'
+//import HeadlineNumbers from '../../Components/HeadlineNumbers'
 
 export class LandingPage extends Component {
 
   getSideBySideOneLeft = () => {
     return (
       <div>
-        <img src="/images/sidebyside/triall_connect.png" alt='triall connect' />
+        <img src="/images/sidebyside/construction_site.png" alt='construction site' />
       </div>
     )
   }
@@ -28,8 +28,9 @@ export class LandingPage extends Component {
     return (
       <div>
         <h3>{Strings.SIDEBYSIDE_ONE_TITLE}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>{Strings.SIDEBYSIDE_ONE_PARAGRAPH_ONE}</p>
+        <p>{Strings.SIDEBYSIDE_ONE_PARAGRAPH_TWO}</p>
+        <p>{Strings.SIDEBYSIDE_ONE_PARAGRAPH_THREE}</p>
       </div>
     )
   }
@@ -38,7 +39,9 @@ export class LandingPage extends Component {
     return (
       <div>
         <h3>{Strings.SIDEBYSIDE_TWO_TITLE}</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>{Strings.SIDEBYSIDE_TWO_PARAGRAPH_ONE}</p>
+        <p>{Strings.SIDEBYSIDE_TWO_PARAGRAPH_TWO}</p>
+        <p>{Strings.SIDEBYSIDE_TWO_PARAGRAPH_THREE}</p>
       </div>
     )
   }
@@ -61,23 +64,25 @@ export class LandingPage extends Component {
           subtitle={ Strings.HERO_SUBTITLE }
           reference='hero'
         />
-        <FeatureCircles
-          title={ Strings.FEATURES_ONE_TITLE }
-          subtitle={ Strings.FEATURES_ONE_SUBTITLE }
-          backgroundColor={ "#DDD" }
-          featuresDetails={featuresOne}
-        />
         <SideBySide
           backgroundColor={ "#FFF" }
-          leftCols={ 4 }
-          rightCols={ 8 }
+          leftCols={ 6 }
+          rightCols={ 6 }
           leftSide={ this.getSideBySideOneLeft }
           rightSide={ this.getSideBySideOneRight }
         />
+        <FeatureCircles
+          title={ Strings.FEATURES_ONE_TITLE }
+          subtitle={ Strings.FEATURES_ONE_SUBTITLE }
+          backgroundColor={ "#E0E0E0" }
+          featuresDetails={ featuresOne }
+        />
+        {/*
         <HeadlineNumbers
           backgroundColor={ "#F0F0F0" }
           items={ headlineNumbersOne }
         />
+        */}
         <SideBySide
           backgroundColor={ "#FFF" }
           leftCols={ 6 }
@@ -86,7 +91,8 @@ export class LandingPage extends Component {
           rightSide={ this.getSideBySideTwoRight }
         />
         <NumberList
-          backgroundColor={ "#F0F0F0" }
+          backgroundColor={ "#E0E0E0" }
+          title={ Strings.NUMBER_LIST_ONE_TITLE }
           items={ numbersListOne }
         />
       </div>

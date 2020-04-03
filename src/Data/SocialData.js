@@ -8,12 +8,12 @@ let socialData = [
     title: 'twitter',
     iconName: 'twitter',
     link: 'https://twitter.com/BuildingIMLtd'
-  }, {
+  }, */
+  {
     title: 'linkedin',
     iconName: 'linkedin',
-    link: 'https://www.linkedin.com/company/building-innovation-management/'
+    link: 'https://www.linkedin.com/company/prind-technology-ltd'
   }
-  */
 ]
 
 export default socialData

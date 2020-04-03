@@ -4,13 +4,15 @@ import PropTypes from 'prop-types'
 // Components
 import { SingleNumberTile } from './elements'
 
-
 // Tools
 import Fade from 'react-reveal/Fade';
+
+// TODO: If less than 4 items for XL, show tiles with col-xl-4
 
 export class NumberList extends Component {
   static propTypes = {
     backgroundColor: PropTypes.string,
+    title: PropTypes.string,
     items: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string.isRequired,
@@ -21,7 +23,7 @@ export class NumberList extends Component {
 
   render () {
 
-    const { backgroundColor, items } = this.props
+    const { backgroundColor, title, items } = this.props
 
     var componentStyle = {}
 
@@ -32,18 +34,23 @@ export class NumberList extends Component {
     return (
       <div id='component-number-list' className='row' style={componentStyle}>
         <div className='component-number-list-container flex-center-content row'>
-          {
-            items.map((numberDetails, index) => (
-              <div key={index} className="col-xl-2 col-lg-4 col-md-6 col-sm-12">
-                <Fade bottom distance="40px">
-                  <SingleNumberTile
-                    headlineNumber={index + 1}
-                    {...numberDetails}
-                  />
-                </Fade>
-              </div>
-            ))
-          }
+          <div className="title row">
+            {title}
+          </div>
+          <div className="items row">
+            {
+              items.map((numberDetails, index) => (
+                <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 item">
+                  <Fade bottom distance="40px">
+                    <SingleNumberTile
+                      headlineNumber={index + 1}
+                      {...numberDetails}
+                    />
+                  </Fade>
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     )

@@ -32,12 +32,8 @@ let numbersListOne = [
     description: Strings.NUMBER_LIST_ONE_TWO_DESCRIPTION,
   },
   {
-    title: Strings.NUMBER_LIST_ONE_ONE_TITLE,
-    description: Strings.NUMBER_LIST_ONE_ONE_DESCRIPTION,
-  },
-  {
-    title: Strings.NUMBER_LIST_ONE_TWO_TITLE,
-    description: Strings.NUMBER_LIST_ONE_TWO_DESCRIPTION,
+    title: Strings.NUMBER_LIST_ONE_THREE_TITLE,
+    description: Strings.NUMBER_LIST_ONE_THREE_DESCRIPTION,
   }
 ]
 
