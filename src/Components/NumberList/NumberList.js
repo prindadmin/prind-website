@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+// Libraries
+import Fade from 'react-reveal/Fade';
+
 // Components
 import { SingleNumberTile } from './elements'
-
-// Tools
-import Fade from 'react-reveal/Fade';
 
 // TODO: If less than 4 items for XL, show tiles with col-xl-4
 
@@ -41,7 +41,7 @@ export class NumberList extends Component {
             {
               items.map((numberDetails, index) => (
                 <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 item">
-                  <Fade bottom distance="40px">
+                  <Fade bottom distance="60px">
                     <SingleNumberTile
                       headlineNumber={index + 1}
                       {...numberDetails}

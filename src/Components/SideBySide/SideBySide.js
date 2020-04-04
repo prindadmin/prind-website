@@ -39,13 +39,13 @@ static propTypes = {
     return (
       <div id='component-side-by-side' className='row' style={componentStyle}>
         <div className="component-side-by-side-container row">
-          <Fade left distance="20px">
+          <Fade left distance="60px">
             <div className={`left-side-container col-md-${leftColsChecked} col-sm-12`}>
               {leftSide()}
             </div>
           </Fade>
 
-          <Fade right distance="20px">
+          <Fade right distance="60px">
             <div className={`right-side-container col-md-${rightColsChecked} col-sm-12`}>
               {rightSide()}
             </div>
