@@ -62,6 +62,25 @@ export class LandingPage extends Component {
     )
   }
 
+  getSideBySideThreeLeft = () => {
+    return (
+      <div>
+        <img src="/images/sidebyside/portal_screenshot_1.png" alt='Prin-D Portal Screenshot' />
+      </div>
+    )
+  }
+
+  getSideBySideThreeRight = () => {
+    return (
+      <div>
+        <h3>{Strings.SIDEBYSIDE_THREE_TITLE}</h3>
+        <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_ONE}</p>
+        <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_TWO}</p>
+        <a class="btn btn-primary" href="https://portal.prind.tech" role="button">{Strings.SIDEBYSIDE_THREE_BUTTON}</a>
+      </div>
+    )
+  }
+
 
   render () {
 
@@ -98,8 +117,15 @@ export class LandingPage extends Component {
           leftSide={ this.getSideBySideTwoLeft }
           rightSide={ this.getSideBySideTwoRight }
         />
-        <NumberList
+        <SideBySide
           backgroundColor={ "#E0E0E0" }
+          leftCols={ 8 }
+          rightCols={ 4 }
+          leftSide={ this.getSideBySideThreeLeft }
+          rightSide={ this.getSideBySideThreeRight }
+        />
+        <NumberList
+          backgroundColor={ "#FFF" }
           title={ Strings.NUMBER_LIST_ONE_TITLE }
           items={ numbersListOne }
         />
