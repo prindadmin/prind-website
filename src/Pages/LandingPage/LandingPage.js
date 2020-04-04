@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 
+// Tools
+import ReactGA from 'react-ga';
+
 import * as Strings from '../../Data/Strings'
 import {
   featuresOne,
@@ -15,6 +18,11 @@ import NumberList from '../../Components/NumberList'
 //import HeadlineNumbers from '../../Components/HeadlineNumbers'
 
 export class LandingPage extends Component {
+
+  componentDidMount() {
+    // Register pageview with GA
+    ReactGA.pageview(location.pathname + location.search);
+  }
 
   getSideBySideOneLeft = () => {
     return (
