@@ -30,6 +30,13 @@ export const SIDEBYSIDE_TWO_PARAGRAPH_ONE = "In the wake of the Grenfell tragedy
 export const SIDEBYSIDE_TWO_PARAGRAPH_TWO = "Buildings are complex objects which require many documents to be iterated many times throughout the design, construction, occupation, and refurbishment phases of their lifecycle.  Add in the tens or hundreds of parties involved in the average construction project and this huge collection of documents and their multiple versions becomes an unwieldy mess that no one party has full visibility or control of."
 export const SIDEBYSIDE_TWO_PARAGRAPH_THREE =  "Designers who use the Prin-D platform will find themselves to be more confident delivering the Principal Designer role and will be more efficient in their delivery with features such as visual gap analysis and automated reporting replace manual tasks and meetings."
 
+export const SIDEBYSIDE_THREE_TITLE = "The Prin-D Portal"
+export const SIDEBYSIDE_THREE_SUBTITLE = ""
+export const SIDEBYSIDE_THREE_PARAGRAPH_ONE = "To address the need for a Principal Designer tool, we have developed the Prin-D Platform.  The platform guides everyone in a project team to the documents and information they need to perform their role under CDM while storing the information securely and with permissioned access."
+export const SIDEBYSIDE_THREE_PARAGRAPH_TWO = "The platform has the ability to verify document versions, individual competencies, and signatures many years after a project is completed through the use of Distributed Ledger Technology (DLT), better known as Blockchain."
+//export const SIDEBYSIDE_THREE_PARAGRAPH_THREE =  "Designers who use the Prin-D platform will find themselves to be more confident delivering the Principal Designer role and will be more efficient in their delivery with features such as visual gap analysis and automated reporting replace manual tasks and meetings."
+export const SIDEBYSIDE_THREE_BUTTON = "Visit the Portal"
+
 export const NUMBER_LIST_ONE_TITLE = "Our Core Pillars"
 
 export const NUMBER_LIST_ONE_ONE_TITLE = "Simplify Construction"

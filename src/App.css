@@ -9,6 +9,7 @@
   --standard-max-width: 1400px;
   --number-list-headline-font-color: #194174;
   --headline-number-font-color: #19744d;
+  --button-background-color: #194174;
 }
 
 .App {
@@ -130,7 +131,10 @@ p {
   padding-right: 2em;
 }
 
-
+#component-feature-circles .feature-circles {
+  justify-content: center;
+  margin: auto;
+}
 
 #component-feature-circle .circle-container {
   height: 128px;
@@ -160,8 +164,22 @@ p {
   margin: auto;
 }
 
+#component-side-by-side .left-side-container {
+  margin-bottom: 2em;
+}
+
 #component-side-by-side img {
   width: 100%;
+}
+
+#component-side-by-side button {
+  min-width: 70%;
+}
+
+#component-side-by-side .btn-primary {
+  background-color: var(--button-background-color);
+  border-color: var(--button-background-color);
+  filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5));
 }
 
 /* ======================================= */
