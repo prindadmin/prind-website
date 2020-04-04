@@ -21,7 +21,7 @@ export class LandingPage extends Component {
 
   componentDidMount() {
     // Register pageview with GA
-    ReactGA.pageview(location.pathname + location.search);
+    ReactGA.pageview("/");
   }
 
   getSideBySideOneLeft = () => {

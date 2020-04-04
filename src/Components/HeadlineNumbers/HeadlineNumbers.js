@@ -34,7 +34,7 @@ export class HeadlineNumbers extends Component {
           {
             items.map((numberDetails, index) => (
               <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                <Fade left distance="40px">
+                <Fade left distance="80px">
                   <HeadlineNumberTile
                     {...numberDetails}
                   />

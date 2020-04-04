@@ -12,6 +12,9 @@ import FooterBar from './Components/FooterBar'
 // Data Import
 import * as Strings from './Data/Strings'
 
+// Library Imports
+import ReactGA from 'react-ga';
+
 // TODO: Fork and fix react-reveal
 
 class App extends Component {
