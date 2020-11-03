@@ -16,8 +16,8 @@ static propTypes = {
   getHeroImage = () => {
 
     const imageLocation = "/images/hero/"
-    const imageName = "hero-7"
-    const fileType = ".jpg"
+    const imageName = "hero-8"
+    const fileType = ".png"
 
     const defaultImage = imageLocation + imageName + "_1920" + fileType
 
