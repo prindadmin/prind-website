@@ -76,6 +76,7 @@ export class LandingPage extends Component {
         <h3>{Strings.SIDEBYSIDE_THREE_TITLE}</h3>
         <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_ONE}</p>
         <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_TWO}</p>
+        <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_THREE}</p>
         <a class="btn btn-primary" href="https://portal.prind.tech" role="button">{Strings.SIDEBYSIDE_THREE_BUTTON}</a>
       </div>
     )
