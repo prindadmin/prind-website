@@ -16,6 +16,7 @@ import FeatureCircles from '../../Components/FeatureCircles'
 import SideBySide from '../../Components/SideBySide'
 import NumberList from '../../Components/NumberList'
 //import HeadlineNumbers from '../../Components/HeadlineNumbers'
+import ContactUs from '../../Components/ContactUs'
 
 export class LandingPage extends Component {
 
@@ -77,7 +78,7 @@ export class LandingPage extends Component {
         <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_ONE}</p>
         <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_TWO}</p>
         <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_THREE}</p>
-        <a class="btn btn-primary" href="https://portal.prind.tech" role="button">{Strings.SIDEBYSIDE_THREE_BUTTON}</a>
+        <a className="btn btn-primary" href="https://portal.prind.tech" role="button">{Strings.SIDEBYSIDE_THREE_BUTTON}</a>
       </div>
     )
   }
@@ -129,6 +130,9 @@ export class LandingPage extends Component {
           backgroundColor={ "#FFF" }
           title={ Strings.NUMBER_LIST_ONE_TITLE }
           items={ numbersListOne }
+        />
+        <ContactUs
+          backgroundColor={ "#E0E0E0" }
         />
       </div>
     )

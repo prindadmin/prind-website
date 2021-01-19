@@ -53,4 +53,17 @@ export const NUMBER_LIST_ONE_THREE_DESCRIPTION = "Bring all the data relevant to
 export const HEADLINE_NUMBER_ONE_ONE_DESCRIPTION = "Projects Completed"
 export const HEADLINE_NUMBER_ONE_TWO_DESCRIPTION = "Technical Partners"
 
-export const COPYRIGHT_TEXT = "Copyright © 2020 PrinD Technology Ltd"
+export const CONTACT_US_HEADING = "Contact Us"
+export const CONTACT_US_TEXT_1 = "If you're working in construction, we want to hear from you.  The Prin-D Technology platform is the perfect solution to keep your project CDM compliant."
+export const CONTACT_US_TEXT_2 = "Please fill in this form and one of our team will get in contact with you to discuss your requirements and demonstrate the platform to you."
+
+export const FORM_PLACEHOLDER_FIRST_NAME = "First Name"
+export const FORM_PLACEHOLDER_LAST_NAME = "Last Name"
+export const FORM_PLACEHOLDER_ORGANISATION = "Organisation"
+export const FORM_PLACEHOLDER_EMAIL_ADDRESS = "Email Address"
+export const FORM_PLACEHOLDER_MESSAGE = "Message"
+export const FORM_SUBMIT = "Submit"
+export const FORM_ERROR_SUBMITTING = "There was a problem; please try again"
+export const FORM_SUBMISSION_SUCCESSFUL = "Thank you for your message.  Someone will be in touch with you as soon as possible"
+
+export const COPYRIGHT_TEXT = "Copyright © 2021 PrinD Technology Ltd"
