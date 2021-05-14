@@ -1,0 +1,13 @@
+.procorePage {
+  width: 100%;
+  min-height: calc(100vh - var(--footer-bar-height));
+  padding: var(--standard-padding);
+  box-sizing: border-box;
+  padding-top: 2em;
+}
+
+.preamble {
+  max-width: 70ch;
+  margin: auto;
+  margin-bottom: 3em;
+}

@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+  min-height: calc(100vh - var(--footer-bar-height));
+  padding: var(--standard-padding);
+  box-sizing: border-box;
+  padding-top: 2em;
+}
+
+.title {
+  max-width: 70ch;
+  margin: auto;
+  margin-bottom: 3em;
+}
+
+.content {
+  max-width: 70ch;
+  margin: auto;
+  margin-bottom: 3em;
+  text-align: left;
+}
+
+.content p {
+  font-size: 18px;
+}
+
+.content p:last-of-type {
+  margin-bottom: 0;
+}
+
+.content img {
+  border: 1px solid #aaa;
+}

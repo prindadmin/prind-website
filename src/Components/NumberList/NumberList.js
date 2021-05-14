@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Libraries
-import Fade from 'react-reveal/Fade';
 
 // Components
 import { SingleNumberTile } from './elements'
@@ -41,12 +40,10 @@ export class NumberList extends Component {
             {
               items.map((numberDetails, index) => (
                 <div key={index} className="col-xl-3 col-lg-4 col-md-6 col-sm-12 item">
-                  <Fade bottom distance="60px">
-                    <SingleNumberTile
-                      headlineNumber={index + 1}
-                      {...numberDetails}
-                    />
-                  </Fade>
+                  <SingleNumberTile
+                    headlineNumber={index + 1}
+                    {...numberDetails}
+                  />
                 </div>
               ))
             }

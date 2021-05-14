@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Libraries
-import Fade from 'react-reveal/Fade';
-
 import ItemIcon from '../Common/ItemIcon'
 
 const defaultColour = '#194174'
@@ -39,19 +37,17 @@ export class FeatureCircle extends Component {
 
     return (
       <div id='component-feature-circle' className='col-xl-4 col-lg-6 col-md-12'>
-        <Fade bottom distance="60px">
-          <div className='circle-container'>
-            <span className="fa-layers fill-parent">
-              <div className="shadow">
-                {circle}
-              </div>
-              {ico}
-            </span>
-          </div>
-          <h2>{title}</h2>
-          <h4>{subtitle}</h4>
-          <p>{description}</p>
-        </Fade>
+        <div className='circle-container'>
+          <span className="fa-layers fill-parent">
+            <div className="shadow">
+              {circle}
+            </div>
+            {ico}
+          </span>
+        </div>
+        <h2>{title}</h2>
+        <h4>{subtitle}</h4>
+        <p>{description}</p>
       </div>
     )
   }

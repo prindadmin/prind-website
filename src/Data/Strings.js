@@ -67,3 +67,15 @@ export const FORM_ERROR_SUBMITTING = "There was a problem; please try again"
 export const FORM_SUBMISSION_SUCCESSFUL = "Thank you for your message.  Someone will be in touch with you as soon as possible"
 
 export const COPYRIGHT_TEXT = "Copyright © 2021 PrinD Technology Ltd"
+
+export const MENU_HOME = "Home"
+export const MENU_SUPPORT = "Support"
+
+// Support Page
+export const SUPPORT_TITLE = "Procore Support"
+export const SUPPORT_PREAMBLE = "These articles are designed to get you started with Foundations.  If you need more help or want to chat to one of our team members, please use the chat function at the bottom right of your screen."
+export const SUPPORT_ARTICLES_TITLE = "Support Articles"
+export const READ_MORE = "Read more"
+
+// Error Boundary
+export const BUTTON_RETRY = "Retry"

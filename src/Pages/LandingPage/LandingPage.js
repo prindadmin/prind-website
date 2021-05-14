@@ -11,6 +11,7 @@ import {
 } from '../../Data/Features'
 
 // Components
+import HeaderBar from '../../Components/HeaderBar'
 import HeroSection from '../../Components/Hero'
 import FeatureCircles from '../../Components/FeatureCircles'
 import SideBySide from '../../Components/SideBySide'
@@ -88,6 +89,7 @@ export class LandingPage extends Component {
 
     return (
       <div id='landing-page' className='full-width'>
+        <HeaderBar companyName={Strings.HEADER_COMPANY_NAME} fadeIn={true} />
         <HeroSection
           title={ Strings.HERO_TITLE }
           subtitle={ Strings.HERO_SUBTITLE }
