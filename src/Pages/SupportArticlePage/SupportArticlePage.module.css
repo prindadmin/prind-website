@@ -21,12 +21,11 @@
 
 .content p {
   font-size: 18px;
-}
-
-.content p:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 1em;
 }
 
 .content img {
   border: 1px solid #aaa;
+  margin-bottom: 1em;
+  margin-top: 0;
 }

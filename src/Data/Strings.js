@@ -73,7 +73,7 @@ export const MENU_SUPPORT = "Support"
 
 // Support Page
 export const SUPPORT_TITLE = "Procore Support"
-export const SUPPORT_PREAMBLE = "These articles are designed to get you started with Foundations.  If you need more help or want to chat to one of our team members, please use the chat function at the bottom right of your screen."
+export const SUPPORT_PREAMBLE = "These articles are designed to get you started with the CDM Compliance Platform on Procore.  If you need more help or want to chat to one of our team members, please use the chat function at the bottom right of your screen."
 export const SUPPORT_ARTICLES_TITLE = "Support Articles"
 export const READ_MORE = "Read more"
 

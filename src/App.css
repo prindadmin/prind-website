@@ -451,3 +451,33 @@ p {
     transform: rotate(360deg);
   }
 }
+
+
+/* ==================================== */
+/* ======= Support Page Classes ======= */
+/* ==================================== */
+
+a.appIcon {
+  text-decoration: none;
+}
+
+img.appIcon {
+  width: 200px;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+.supportImg {
+  max-width: 300px;
+  margin-top: 1em;
+}
+
+.supportImgWide {
+  max-width: 500px;
+  margin-top: 1em;
+}
+
+.supportImgSmall {
+  max-width: 200px;
+  margin-top: 1em;
+}
