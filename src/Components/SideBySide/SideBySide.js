@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 // Tools
-import Fade from 'react-reveal/Fade';
 
 // leftCols = width of left side (out of 12)
 // rightCols = width of right side (out of 12)
@@ -39,17 +38,13 @@ static propTypes = {
     return (
       <div id='component-side-by-side' className='row' style={componentStyle}>
         <div className="component-side-by-side-container row">
-          <Fade left distance="60px">
-            <div className={`left-side-container col-md-${leftColsChecked} col-sm-12`}>
-              {leftSide()}
-            </div>
-          </Fade>
+          <div className={`left-side-container col-md-${leftColsChecked} col-sm-12`}>
+            {leftSide()}
+          </div>
 
-          <Fade right distance="60px">
-            <div className={`right-side-container col-md-${rightColsChecked} col-sm-12`}>
-              {rightSide()}
-            </div>
-          </Fade>
+          <div className={`right-side-container col-md-${rightColsChecked} col-sm-12`}>
+            {rightSide()}
+          </div>
 
         </div>
       </div>

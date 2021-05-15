@@ -1,0 +1,25 @@
+.tile {
+  text-align: left;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.content {
+  margin-bottom: 1em;
+}
+
+.readMore {
+  color: blue;
+  font-weight: var(--font-weight-medium);
+  width: max-content;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}

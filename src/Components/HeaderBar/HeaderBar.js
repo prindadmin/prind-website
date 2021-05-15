@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
+
+import * as Strings from '../../Data/Strings'
 
 const FADE_IN_DISTANCE = 400
 
@@ -13,6 +15,7 @@ const FADE_IN_DISTANCE = 400
 export class HeaderBar extends Component {
   static propTypes = {
     companyName: PropTypes.string.isRequired,
+    fadeIn: PropTypes.bool.isRequired
   }
 
   constructor() {
@@ -23,42 +26,48 @@ export class HeaderBar extends Component {
   }
 
   componentDidMount () {
-
-    const that = this
-
     window.onscroll = function() {
       var opacity = 1;
       if ( window.pageYOffset < FADE_IN_DISTANCE ) {
         opacity = window.pageYOffset / FADE_IN_DISTANCE
       }
-
-      that.setState({
+      this.setState({
         opacity
       })
-    }
+    }.bind(this)
   }
 
   componentWillUnmount() {
     window.onscroll = null;
   }
 
+  getMenu = () => {
+    return (
+      <Fragment>
+        <div className="menu-element"><Link to='/'>{Strings.MENU_HOME}</Link></div>
+        <div><Link to='/procore-support'>{Strings.MENU_SUPPORT}</Link></div>
+      </Fragment>
+    )
+  }
+
+
   render () {
 
     const { companyName } = this.props
     const { opacity } = this.state
 
-    const style = { opacity: opacity }
+    const style = this.props.fadeIn ? { opacity: opacity } : { opacity: 1, position: "relative" }
 
     return (
-      <div id='header-bar' className='col-12' style={style}>
-        <div className='header-container col-12'>
-          <div className='company-name col-3'>
+      <div id='header-bar' style={style}>
+        <div className='header-container'>
+          <div className='company-name'>
             <Link to='/'>
               <h1>{ companyName }</h1>
             </Link>
           </div>
-          <div className='nav-links col-3'>
-            {/*this.getMenu()*/}
+          <div className='nav-links'>
+            { this.getMenu() }
           </div>
         </div>
       </div>

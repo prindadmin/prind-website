@@ -2,20 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+// Data
+import { Endpoints } from './Data'
+
 // Page Imports
 import LandingPage from './Pages/LandingPage'
+import ProcoreSupportPage from './Pages/ProcoreSupportPage'
+import SupportArticlePage from './Pages/SupportArticlePage'
 
 // Component Imports
-import HeaderBar from './Components/HeaderBar'
 import FooterBar from './Components/FooterBar'
-
-// Data Import
-import * as Strings from './Data/Strings'
 
 // Library Imports
 import ReactGA from 'react-ga';
-
-// TODO: Fork and fix react-reveal
 
 class App extends Component {
 
@@ -59,13 +58,12 @@ class App extends Component {
 
     return (
       <Router>
-        <div className="App container-fluid">
-          <div className='all-content row'>
-            <HeaderBar
-              companyName={Strings.HEADER_COMPANY_NAME}
-            />
+        <div className="App">
+          <div className='content-container'>
             <Switch>
               <Route exact path='/' component={ LandingPage } />
+              <Route exact path='/procore-support' component={ ProcoreSupportPage } />
+              <Route path={`${Endpoints.PROCORESUPPORTPAGE}/:id`} component={ SupportArticlePage } />
               <Route component={ LandingPage } />
             </Switch>
             <FooterBar />
