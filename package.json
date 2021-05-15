@@ -29,6 +29,7 @@
     "build:production": "env-cmd -f .env.production npm run build",
     "deploy:dev": "npm run build:dev && npm run s3Sync:dev  && npm run cfInvalidate:dev",
     "deploy:production": "npm run build:production && npm run s3Sync:production && npm run cfInvalidate:production",
+    "deploy:all": "npm run deploy:production && npm run deploy:dev",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
