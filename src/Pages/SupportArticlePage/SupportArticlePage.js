@@ -159,6 +159,25 @@ export class SupportArticlePage extends Component {
     )
   }
 
+
+  getProcoreSetupArticle = () => {
+    return (
+      <Fragment>
+        <b><p>How to Set Up the CDM Compliance Platform in Procore</p></b>
+        <p>The CDM Compliance Platform is simple to set up and can be configured at the company level for all projects within your portfolio.</p>
+        <p>1) When using Procore, open the App Management Settings page:</p>
+        <img className="supportImgVeryWide" src="/images/support/support-setupEmbeddedAppProcore-1.png" alt="Procore App Management" />
+        <p>2) Click on the 'View' button next to the CDM Compliance Platform application</p>
+        <p>3) Select the 'Configurations' tab for the app</p>
+        <p>4) Click on the 'Create Configuration' button</p>
+        <img className="supportImgVeryWide" src="/images/support/support-setupEmbeddedAppProcore-2.png" alt="Procore App Management Configuration Tab" />
+        <p>5) Enter the settings below and save them:</p>
+        <img className="supportImgWide" src="/images/support/support-setupEmbeddedAppProcore-3.png" alt="Procore CDM Compliance App Settings" />
+        <p>6) The CDM Compliance App is now ready to be used on every project in your portfolio.</p>
+      </Fragment>
+    )
+  }
+
   getContent = (id) => {
     if (id === 'downloadApp') {
       return this.getDownloadAppArticle()
@@ -171,6 +190,9 @@ export class SupportArticlePage extends Component {
     }
     if (id === 'understandingStages') {
       return this.getUnderstandingStagesArticle()
+    }
+    if (id === 'setupEmbeddedAppProcore') {
+      return this.getProcoreSetupArticle()
     }
     return <p>Article not found</p>
   }

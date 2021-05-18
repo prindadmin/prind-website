@@ -18,6 +18,11 @@ export const SupportArticles = [
     id: 'downloadApp',
     title: 'Download the Foundations Mobile App',
     description: 'Learn how to install the signing mobile app onto your smartphone or tablet.'
+  },
+  {
+    id: 'setupEmbeddedAppProcore',
+    title: 'Set up the App in Procore',
+    description: 'Learn how to configure the CDM Compliance Platform app in Procore.'
   }
 ]
 

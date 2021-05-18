@@ -1,6 +1,6 @@
 .procorePage {
   width: 100%;
-  min-height: calc(100vh - var(--footer-bar-height));
+  min-height: calc(100vh - var(--footer-bar-height) - var(--header-bar-height));
   padding: var(--standard-padding);
   box-sizing: border-box;
   padding-top: 2em;
