@@ -66,7 +66,7 @@ export const FORM_SUBMIT = "Submit"
 export const FORM_ERROR_SUBMITTING = "There was a problem; please try again"
 export const FORM_SUBMISSION_SUCCESSFUL = "Thank you for your message.  Someone will be in touch with you as soon as possible"
 
-export const COPYRIGHT_TEXT = "Copyright © 2021 PrinD Technology Ltd"
+export const COPYRIGHT_TEXT = "Copyright © YEARPLACEHOLDER PrinD Technology Ltd"
 
 export const MENU_HOME = "Home"
 export const MENU_SUPPORT = "Support"
@@ -79,3 +79,9 @@ export const READ_MORE = "Read more"
 
 // Error Boundary
 export const BUTTON_RETRY = "Retry"
+
+// Footer Bar Text
+export const FOOTER_BAR_HEADING_LINKS = "Links"
+
+export const FOOTER_BAR_LINK_HOME = "Home"
+export const FOOTER_BAR_LINK_PROCORE_SUPPORT = "Procore Support"

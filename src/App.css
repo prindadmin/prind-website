@@ -6,6 +6,7 @@
   --header-bar-height: 100px;
   --footer-bar-height: 125px;
   --standard-padding: 5em 3em;
+  --standard-padding-small: 2em;
   --standard-max-width: 1400px;
   --number-list-headline-font-color: #194174;
   --headline-number-font-color: #19744d;
@@ -85,15 +86,18 @@ p {
   z-index: 100;
   display: flex;
   align-items: center;
-  padding: 1em;
   width: 100%;
 }
 
 #header-bar .header-container {
+  box-sizing: border-box;
   display: grid;
   grid-auto-flow: column;
+  grid-gap: 1em;
+  margin: 0 1em;
   width: 100%;
   color: white;
+  height: var(--header-bar-height);
 }
 
 #header-bar .company-name {
@@ -369,41 +373,6 @@ p {
   border: 3px var(--colour-3) solid;
 }
 
-/* ================================== */
-/* ======= Footer Bar section ======= */
-/* ================================== */
-
-#footer-bar {
-  height: var(--footer-bar-height);
-  background-color: black;
-  display: flex;
-  align-items: center;
-}
-
-#footer-bar .footer-container {
-  display: flex;
-  flex-direction: column;
-}
-
-#footer-bar .footer-container a {
-  color: white;
-}
-
-#footer-bar .legal {
-  color: white;
-  font-size: 12px;
-}
-
-/* =================================== */
-/* ======= Social Link section ======= */
-/* =================================== */
-
-#social-links-container {
-}
-
-#social-links-container .single-social-icon {
-  margin: 1em;
-}
 
 
 /* ==================================== */

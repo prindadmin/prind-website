@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 //import PropTypes from 'prop-types'
+import classes from './SocialLinks.module.css'
 
 // Components
 import { SingleSocialLink } from './elements'
@@ -7,7 +8,7 @@ import { SingleSocialLink } from './elements'
 // Data
 import socialData from '../../Data/SocialData'
 
-export class FooterBar extends Component {
+export class SocialLinks extends Component {
   static propTypes = {
   }
 
@@ -15,7 +16,7 @@ export class FooterBar extends Component {
   render () {
 
     return (
-      <div id='social-links-container' className='row flex-center-content'>
+      <div id='social-links-container' className={classes.socialContainer}>
         {
           socialData.map((socialPlatform, index) => (
             <SingleSocialLink
@@ -31,4 +32,4 @@ export class FooterBar extends Component {
   }
 }
 
-export default FooterBar
+export default SocialLinks
