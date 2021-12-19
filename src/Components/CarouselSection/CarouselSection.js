@@ -60,6 +60,7 @@ export class CarouselSection extends Component {
 
   getReasons = () => {
 
+    // These numbers will have to be calculated rather than hard coded
     const CAROUSEL_ITEM_WIDTH = 500
     const CAROUSEL_ITEM_HOLDER_WIDTH = 354
 
