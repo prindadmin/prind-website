@@ -1,18 +1,12 @@
-/* Grid system */
-@import "~bootstrap/dist/css/bootstrap-grid.min.css";
-@import "~bootstrap/dist/css/bootstrap.min.css";
 
 :root {
-  --header-bar-height: 100px;
   --footer-bar-height: 125px;
-  --standard-padding: 5em 3em;
-  --standard-padding-small: 2em;
   --standard-max-width: 1400px;
-  --number-list-headline-font-color: #194174;
-  --headline-number-font-color: #19744d;
-  --button-background-color: #194174;
-  --intro-grid-columns: 1;
   --colour-4: rgba(192,192,192,1);
+  --prind-colour-1: #131419;
+  --prind-colour-2: #DCC394;
+  --prind-colour-3: #F5F1EC;
+  --prind-colour-4: #0F1014;
 }
 
 #root {
@@ -25,6 +19,7 @@
 
 .App {
   text-align: center;
+  background-color: var(--prind-colour-1);
 }
 
 .full-height {
@@ -40,422 +35,78 @@
   width: 100%;
 }
 
-.flex-center-content {
+.button {
+  --button-height: 39px;
+  height: var(--button-height);
+  border-radius: calc(var(--button-height) / 2);
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px 14px;
+  margin-right: 13px;
 }
 
-h4 {
-  font-weight: 300;
-  color: #666;
-  font-size: 1.3em;
-}
-
-p {
-  margin-bottom: 2em;
-}
-
-
-@media (min-width: 1200px) {
-  :root {
-    --intro-grid-columns: 2;
+@media (min-width: 800px) {
+  .button {
+    font-size: 14px;
+    --button-height: 55px;
+    padding: 10px 24px;
   }
 }
 
-.btn-primary {
-  background-color: var(--button-background-color);
-  border-color: var(--button-background-color);
-  filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5));
-}
-
-.h-o-n-e-y {
-  display:none !important;
-}
-
-/* ================================== */
-/* ======= Header Bar section ======= */
-/* ================================== */
-
-#header-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: var(--header-bar-height);
-  background-color: black;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-#header-bar .header-container {
-  box-sizing: border-box;
-  display: grid;
-  grid-auto-flow: column;
-  grid-gap: 1em;
-  margin: 0 1em;
-  width: 100%;
-  color: white;
-  height: var(--header-bar-height);
-}
-
-#header-bar .company-name {
-  text-align: left;
-}
-
-#header-bar .nav-links {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-#header-bar .header-container a {
-  color: white;
-}
-
-#header-bar h1 {
-  font-size: 30px;
-}
-
-#header-bar .menu-element {
-  margin: 0 2em;
-}
-
-/* ================================ */
-/* ========= Hero section ========= */
-/* ================================ */
-
-#component-hero {
-  height: 100vh;
-  background-color: #DCDCDC;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-#component-hero .image-container {
-}
-
-#component-hero .text-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-#component-hero .fill {
-  overflow: hidden;
-  background: no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
-}
-
-/* =========================================== */
-/* ========= Feature Circles section ========= */
-/* =========================================== */
-
-#component-feature-circles {
-  padding: var(--standard-padding);
-}
-
-#component-feature-circles .component-feature-circles-container {
-  max-width: var(--standard-max-width);
-  width: 90%;
-  margin: auto;
-}
-
-#component-feature-circle {
-  padding-top: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
-}
-
-#component-feature-circles .feature-circles {
-  justify-content: center;
-  margin: auto;
-}
-
-#component-feature-circle .circle-container {
-  height: 128px;
-  margin-bottom: 1em;
-}
-
-#component-feature-circle p {
-  margin-top: 1em;
-}
-
-
-#component-feature-circle .shadow svg {
-  filter: drop-shadow( 3px 3px 3px rgba(0, 0, 0, .5));
-}
-
-/* ======================================== */
-/* ========= Side By Side section ========= */
-/* ======================================== */
-
-#component-side-by-side {
-  padding: var(--standard-padding);
-}
-
-#component-side-by-side .component-side-by-side-container {
-  max-width: var(--standard-max-width);
-  width: 90%;
-  margin: auto;
-}
-
-#component-side-by-side .left-side-container {
-  margin-bottom: 2em;
-}
-
-#component-side-by-side img {
-  width: 100%;
-}
-
-#component-side-by-side button {
-  min-width: 70%;
-}
-
-/* ======================================= */
-/* ========= Number List section ========= */
-/* ======================================= */
-
-#component-number-list {
-  padding: var(--standard-padding);
-}
-
-#component-number-list .component-number-list-container {
-  max-width: var(--standard-max-width);
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-}
-
-#component-number-list .single-number-tile {
-  display: flex;
-  flex-direction: column;
-}
-
-#component-number-list .headline-number {
-  font-size: 3em;
-  font-weight: bold;
-  color: var(--number-list-headline-font-color)
-}
-
-#component-number-list .title {
-  font-size: 2.5em;
-  font-weight: bold;
-  margin-bottom: 1em;
-}
-
-#component-number-list .items .title {
-  font-size: 1.3em;
-  font-weight: normal;
-  margin-bottom: 0.8em;
-}
-
-#component-number-list .description {
-
-}
-
-#component-number-list .items {
-  justify-content: center;
-  margin: auto;
-}
-
-#component-number-list .item {
-  margin-bottom: 2em;
-}
-
-/* ======================================= */
-/* ======= Headline Number section ======= */
-/* ======================================= */
-
-#component-headline-numbers {
-  padding: var(--standard-padding);
-}
-
-#component-headline-numbers .component-headline-numbers-container {
-  max-width: var(--standard-max-width);
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-}
-
-#component-headline-numbers .headline-number-tile {
-  display: flex;
-  flex-direction: column;
-}
-
-#component-headline-numbers .headline-number {
-  font-size: 6em;
-  font-weight: bold;
-  color: var(--headline-number-font-color)
-}
-
-#component-headline-numbers .title {
-  font-size: 1.3em;
-  margin-bottom: 0.8em;
-}
-
-#component-headline-numbers .description {
-
-}
-
-/* ====================================== */
-/* ========= Contact Us Section ========= */
-/* ====================================== */
-
-#component-contact-us {
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  padding: 100px 0 100px 0;
-}
-
-#component-contact-us .component-contact-us-content-container {
-  width: 80%;
-  max-width: 1600px;
-  display: grid;
-  grid-template-columns: repeat(var(--intro-grid-columns), minmax(min(300px, 100%), 1fr));
-  grid-template-rows: repeat(1, 1fr);
-  grid-gap: 0px 5vw;
-}
-
-#component-contact-us .item {
-  display: flex;
-  text-align: left;
-}
-
-#component-contact-us .text-container {
-  flex-direction: column;
-}
-
-#component-contact-us .form-container {
-  flex-direction: column;
-}
-
-#component-contact-us .submission-error h3 {
-  margin-bottom: 20px;
-}
-
-#component-contact-us form {
-  width: 100%;
-}
-
-#component-contact-us input {
-  width: 100%;
-  min-height: 56px;
-  border-radius: 15px;
-  border: 3px var(--colour-9) solid;
-  padding: 0px 27px;
-  margin-bottom: 31px;
-  font-size: 22px;
-  box-sizing:border-box;
-}
-
-#component-contact-us label {
-  font-size: 0px;
-}
-
-#component-contact-us input::placeholder {
-  color: var(--colour-4);
-}
-
-#component-contact-us .submit-button {
-  width: 50%;
-  border: 3px var(--colour-3) solid;
-}
-
-
-
-/* ==================================== */
-/* ========= Pure CSS Spinner ========= */
-/* ==================================== */
-
-.lds-ring {
-  display: inline-block;
-  position: relative;
-  margin: auto;
-  width: 80px;
-  height: 80px;
-}
-
-.lds-ring div {
-  box-sizing: border-box;
+.spacer {
   display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid var(--number-list-headline-font-color);
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: var(--number-list-headline-font-color) transparent transparent transparent;
 }
 
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
+.button:last-child {
+  margin-right: 0;
 }
 
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
+.button.primary {
+  color: #131419;
+  background-color: var(--prind-colour-2);
 }
 
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
+.button.secondary {
+  border: 1px solid var(--prind-colour-2);
+  color: var(--prind-colour-3);
+  background-color: var(--prind-colour-1);
 }
 
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
+.button.big {
+  --button-height: 55px !important;
+}
+
+h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 110%;
+  color: var(--prind-colour-3);
+}
+
+h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 110%;
+  color: var(--prind-colour-2);
+}
+
+@media (min-width: 800px) {
+
+  h1 {
+    font-size: 60px;
+    line-height: 130%;
   }
-  100% {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 60px;
+    line-height: 130%;
   }
-}
 
-
-/* ==================================== */
-/* ======= Support Page Classes ======= */
-/* ==================================== */
-
-a.appIcon {
-  text-decoration: none;
-}
-
-img.appIcon {
-  width: 200px;
-  margin-right: 1em;
-  margin-top: 1em;
-}
-
-.supportImg {
-  width: 100%;
-  max-width: 300px;
-  margin-top: 1em;
-}
-
-.supportImgWide {
-  width: 100%;
-  max-width: 500px;
-  margin-top: 1em;
-}
-
-.supportImgVeryWide {
-  width: 100%;
-  max-width: 750px;
-  margin-top: 1em;
-}
-
-.supportImgSmall {
-  width: 100%;
-  max-width: 200px;
-  margin-top: 1em;
 }

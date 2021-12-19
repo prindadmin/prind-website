@@ -3,138 +3,75 @@ import React, { Component } from 'react'
 // Tools
 import ReactGA from 'react-ga';
 
-import * as Strings from '../../Data/Strings'
+import * as STRINGS from '../../Data/Strings'
+/*
 import {
   featuresOne,
   numbersListOne,
   //headlineNumbersOne,
 } from '../../Data/Features'
+*/
 
 // Components
-import HeaderBar from '../../Components/HeaderBar'
+//import HeaderBar from '../../Components/HeaderBar'
 import HeroSection from '../../Components/Hero'
-import FeatureCircles from '../../Components/FeatureCircles'
-import SideBySide from '../../Components/SideBySide'
-import NumberList from '../../Components/NumberList'
+import FeaturesSection from '../../Components/FeaturesSection'
+import VerticalDotsSection from '../../Components/VerticalDotsSection'
+//import FeatureCircles from '../../Components/FeatureCircles'
+//import SideBySide from '../../Components/SideBySide'
 //import HeadlineNumbers from '../../Components/HeadlineNumbers'
-import ContactUs from '../../Components/ContactUs'
+//import ContactUs from '../../Components/ContactUs'
 
 export class LandingPage extends Component {
+
+  constructor() {
+    super()
+    this.state = {
+      screenDimensions: {
+        width: 0,
+        height: 0
+      }
+    }
+    this.updateWindowDimensions = this.updateWindowDimensions.bind(this)
+  }
 
   componentDidMount() {
     // Register pageview with GA
     ReactGA.pageview("/");
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions);
   }
 
-  getSideBySideOneLeft = () => {
-    return (
-      <div>
-        <img src="/images/sidebyside/construction_site.png" alt='construction site' />
-      </div>
-    )
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions);
   }
 
-  getSideBySideOneRight = () => {
-    return (
-      <div>
-        <h3>{Strings.SIDEBYSIDE_ONE_TITLE}</h3>
-        <p>{Strings.SIDEBYSIDE_ONE_PARAGRAPH_ONE}</p>
-        <p>{Strings.SIDEBYSIDE_ONE_PARAGRAPH_TWO}</p>
-        <p>{Strings.SIDEBYSIDE_ONE_PARAGRAPH_THREE}</p>
-      </div>
-    )
+  updateWindowDimensions() {
+    this.setState({
+      screenDimensions: {
+        width: window.innerWidth,
+        height: window.innerHeight
+      }
+    });
   }
-
-  getSideBySideTwoLeft = () => {
-    return (
-      <div>
-        <h3>{Strings.SIDEBYSIDE_TWO_TITLE}</h3>
-        <p>{Strings.SIDEBYSIDE_TWO_PARAGRAPH_ONE}</p>
-        <p>{Strings.SIDEBYSIDE_TWO_PARAGRAPH_TWO}</p>
-        <p>{Strings.SIDEBYSIDE_TWO_PARAGRAPH_THREE}</p>
-      </div>
-    )
-  }
-
-  getSideBySideTwoRight = () => {
-    return (
-      <div>
-        <img src="/images/sidebyside/factom_connect.png" alt='factom connect' />
-      </div>
-    )
-  }
-
-  getSideBySideThreeLeft = () => {
-    return (
-      <div>
-        <img src="/images/sidebyside/portal_screenshot_1.png" alt='Prin-D Portal Screenshot' />
-      </div>
-    )
-  }
-
-  getSideBySideThreeRight = () => {
-    return (
-      <div>
-        <h3>{Strings.SIDEBYSIDE_THREE_TITLE}</h3>
-        <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_ONE}</p>
-        <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_TWO}</p>
-        <p>{Strings.SIDEBYSIDE_THREE_PARAGRAPH_THREE}</p>
-        <a className="btn btn-primary" href="https://portal.prind.tech" role="button">{Strings.SIDEBYSIDE_THREE_BUTTON}</a>
-      </div>
-    )
-  }
-
 
   render () {
-
     return (
       <div id='landing-page' className='full-width'>
-        <HeaderBar companyName={Strings.HEADER_COMPANY_NAME} fadeIn={true} />
         <HeroSection
-          title={ Strings.HERO_TITLE }
-          subtitle={ Strings.HERO_SUBTITLE }
           reference='hero'
+          screenDimensions={ this.state.screenDimensions }
         />
-        <SideBySide
-          backgroundColor={ "#FFF" }
-          leftCols={ 6 }
-          rightCols={ 6 }
-          leftSide={ this.getSideBySideOneLeft }
-          rightSide={ this.getSideBySideOneRight }
+        <FeaturesSection
+          reference='features'
+          title={STRINGS.ALL_YOUR_INFO_TITLE}
+          body={STRINGS.ALL_YOUR_INFO_BODY}
+          screenDimensions={ this.state.screenDimensions }
         />
-        <FeatureCircles
-          title={ Strings.FEATURES_ONE_TITLE }
-          subtitle={ Strings.FEATURES_ONE_SUBTITLE }
-          backgroundColor={ "#E0E0E0" }
-          featuresDetails={ featuresOne }
-        />
-        {/*
-        <HeadlineNumbers
-          backgroundColor={ "#F0F0F0" }
-          items={ headlineNumbersOne }
-        />
-        */}
-        <SideBySide
-          backgroundColor={ "#FFF" }
-          leftCols={ 6 }
-          rightCols={ 6 }
-          leftSide={ this.getSideBySideTwoLeft }
-          rightSide={ this.getSideBySideTwoRight }
-        />
-        <SideBySide
-          backgroundColor={ "#E0E0E0" }
-          leftCols={ 8 }
-          rightCols={ 4 }
-          leftSide={ this.getSideBySideThreeLeft }
-          rightSide={ this.getSideBySideThreeRight }
-        />
-        <NumberList
-          backgroundColor={ "#FFF" }
-          title={ Strings.NUMBER_LIST_ONE_TITLE }
-          items={ numbersListOne }
-        />
-        <ContactUs
-          backgroundColor={ "#E0E0E0" }
+        <VerticalDotsSection
+          reference='features'
+          title={STRINGS.VERTICAL_DOTS_TITLE}
+          screenDimensions={ this.state.screenDimensions }
         />
       </div>
     )

@@ -1,7 +1,33 @@
 export const HEADER_COMPANY_NAME = "PrinD Technology"
 
-export const HERO_TITLE = "PRIN-D TECHNOLOGY"
-export const HERO_SUBTITLE = "The Digital Compliance Platform for CDM"
+export const HERO_TITLE_ONE = "All your compliance information."
+export const HERO_TITLE_TWO = "One simple platform."
+export const HERO_SUBTITLE = "Safe. Structured. Secure."
+
+export const ALL_YOUR_INFO_TITLE = 'All your information, all in one place'
+export const ALL_YOUR_INFO_BODY = 'The Prin-D platform helps you to build and maintain an Immutable Digital Record (IDR) for all of your compliance related information and your built assets throughout their whole lifecycle.'
+
+export const FEATURE_MANAGED_RECORDS_TITLE = "Managed Records"
+export const FEATURE_MANAGED_RECORDS_BODY = "Prin-D can be accessed at anytime throughout an asset’s lifecycle facilitating regular review and update of records."
+export const FEATURE_CDM_ASSURANCE_TITLE = "CDM Assurance"
+export const FEATURE_CDM_ASSURANCE_BODY = "Information is structured in accordance with project work stages.  Prin-D prompts the users to upload the relevant CDM requirement at each stage of the project"
+export const FEATURE_SECURE_DIGITAL_RECORDS_TITLE = "Secure Digital Records"
+export const FEATURE_SECURE_DIGITAL_RECORDS_BODY = "Prin-D harnesses Blockchain technology to provide the highest level of information security and validation."
+export const FEATURE_SAFE_STRUCTURED_SECURE_TITLE = "Safe. Structured. Secure."
+export const FEATURE_SAFE_STRUCTURED_SECURE_BODY = "Prin-D uses state of the art technology and a simple interface to ensure all of your compliance information is safe, structured and secure."
+export const FEATURE_GOLDEN_THREAD_TITLE = "Golden Thread"
+export const FEATURE_GOLDEN_THREAD_BODY = "Prin-D enables CDM and compliance related information to be easily accessed, reviewed and distributed, contributing to your Golden Thread of Information."
+export const FEATURE_COMPLEXITY_SIMPLIFIED_TITLE = "Complexity Simplified"
+export const FEATURE_COMPLEXITY_SIMPLIFIED_BODY = "The Prin-D Platform and interface facilitates the management and structuring of the myriad of Compliance related documents and data."
+
+export const VERTICAL_DOTS_TITLE = "Why we built the Prin-D digital platform"
+export const VERTICAL_DOTS_SIMPLIFY_CDM_TITLE = "We wanted to simplify CDM compliance for our customers"
+export const VERTICAL_DOTS_SIMPLIFY_CDM_BODY = "CDM Compliance is fundamental for all built environment projects.  CDM   is viewed as complex, specialist and administrative.  The platform provides clarity by notifying users of what information is required and when in order to achieve CDM compliance."
+export const VERTICAL_DOTS_TIRED_OF_GAPS_TITLE = "We were tired of gaps in vital records"
+export const VERTICAL_DOTS_TIRED_OF_GAPS_BODY = "Multiple information systems, managed by different information/service providers at different times during an assets Lifecycle often results in information being lost or outdated.  The Prin-D platform simplifies this process by providing one place for all your compliance information."
+export const VERTICAL_DOTS_ONE_PLACE_TITLE = "We needed to work at scale"
+export const VERTICAL_DOTS_ONE_PLACE_BODY = "The digitalisation of project work-flows increases efficiencies.  The Prin-D platform enables our clients to manage multiple projects within one platform using less resources."
+
 
 export const SIDEBYSIDE_ONE_TITLE = "A Changing Industry"
 export const SIDEBYSIDE_ONE_SUBTITLE = ""
