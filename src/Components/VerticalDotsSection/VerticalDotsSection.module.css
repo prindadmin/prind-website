@@ -41,10 +41,15 @@
 }
 
 .featureTile {
+  --line-width: 2px;
   margin: 0;
   display: grid;
   grid-template-columns: 30px auto;
   grid-column-gap: 20px;
+}
+
+.featureTile:last-child {
+  --line-width: 0;
 }
 
 .featureTile > .textHolder > h4 {
@@ -87,6 +92,6 @@
   position: absolute;
   top: var(--holder-width);
   left: calc(var(--holder-width) / 2);
-  width: 2px;
+  width: var(--line-width);
   background-color: #DCC394;
 }
