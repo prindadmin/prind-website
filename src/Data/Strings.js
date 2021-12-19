@@ -28,6 +28,17 @@ export const VERTICAL_DOTS_TIRED_OF_GAPS_BODY = "Multiple information systems, m
 export const VERTICAL_DOTS_ONE_PLACE_TITLE = "We needed to work at scale"
 export const VERTICAL_DOTS_ONE_PLACE_BODY = "The digitalisation of project work-flows increases efficiencies.  The Prin-D platform enables our clients to manage multiple projects within one platform using less resources."
 
+export const REASONS_TITLE = "Why choose Prin-D?"
+export const REASONS_BODY = "Prin-D facilitates access and maintenance of all your compliance information in a single, simple to use platform."
+
+export const REASONS_REASON_ONE_BODY = "CDM compliance is made simple - our interface is structure to guide you through the process."
+export const REASONS_REASON_TWO_BODY = "No more gaps in information - Prin-D provides prompts to the user where relevant information is required."
+export const REASONS_REASON_THREE_BODY = "All compliance information in one place - Prin-D retains all relevant information throughout the Whole Asset Lifecycle in a structured framework."
+
+
+
+
+
 
 export const SIDEBYSIDE_ONE_TITLE = "A Changing Industry"
 export const SIDEBYSIDE_ONE_SUBTITLE = ""

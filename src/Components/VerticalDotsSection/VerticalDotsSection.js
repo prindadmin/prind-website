@@ -61,6 +61,10 @@ export class VerticalDotsSection extends Component {
               this.getPoints()
             }
           </div>
+
+          <div className={classes.featureImage}>
+            <img src='/images/sidebyside/construction-worker.jpg' alt='' />
+          </div>
         </div>
 
       </div>

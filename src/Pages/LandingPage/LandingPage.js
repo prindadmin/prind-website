@@ -17,6 +17,7 @@ import {
 import HeroSection from '../../Components/Hero'
 import FeaturesSection from '../../Components/FeaturesSection'
 import VerticalDotsSection from '../../Components/VerticalDotsSection'
+import CarouselSection from '../../Components/CarouselSection'
 //import FeatureCircles from '../../Components/FeatureCircles'
 //import SideBySide from '../../Components/SideBySide'
 //import HeadlineNumbers from '../../Components/HeadlineNumbers'
@@ -71,6 +72,12 @@ export class LandingPage extends Component {
         <VerticalDotsSection
           reference='features'
           title={STRINGS.VERTICAL_DOTS_TITLE}
+          screenDimensions={ this.state.screenDimensions }
+        />
+        <CarouselSection
+          reference='reasons'
+          title={STRINGS.REASONS_TITLE}
+          body={STRINGS.REASONS_BODY}
           screenDimensions={ this.state.screenDimensions }
         />
       </div>
