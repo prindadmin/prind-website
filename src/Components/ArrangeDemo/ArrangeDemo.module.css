@@ -1,11 +1,11 @@
 
 .sectionComponent {
   max-width: 100vw;
+  min-height: 100vh;
 }
 
 @media (min-width: 800px) {
   .sectionComponent {
-    min-height: 800px;
   }
 }
 
@@ -27,8 +27,9 @@
   max-width: var(--standard-max-width);
   margin: 0 30px;
   text-align: left;
-  z-index: 100;
-  padding-bottom: 73px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .contentContainer a:link,
@@ -50,6 +51,7 @@
   flex-direction: row;
   object-fit: contain;
   max-width: 100vw;
+  width: 100%;
   align-items: center;
   padding-top: 22px;
   margin: 0 -20px 0 0;
@@ -62,42 +64,9 @@
   }
 }
 
-.textContainer {
-  margin-top: 48px;
-}
-
 @media (min-width: 1024px) {
-  .textContainer {
+  .formContainer {
     margin-top: 137px;
-  }
-}
-
-.textContainer > h1 {
-  margin: 0;
-}
-
-.titleOne {
-  margin-bottom: 1em !important;
-}
-
-@media (min-width: 800px) {
-  .titleOne {
-    margin-bottom: 0 !important;
-  }
-}
-
-.textContainer > h2 {
-  margin: 0;
-}
-
-.buttonContainer {
-  display: flex;
-  flex-direction: column;
-}
-
-@media (min-width: 800px) {
-  .buttonContainer {
-    flex-direction: row;
   }
 }
 
@@ -112,7 +81,7 @@
   }
 }
 
-.logInButton {
+.contactButton {
 
 }
 
@@ -121,4 +90,30 @@
   max-width: 207px;
   object-fit: contain;
   margin-right: auto;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.formBox {
+  border-radius: 39px;
+  border: 1px solid #DCC394;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.formBox > h2 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 130%;
+  text-align: center;
+  color: var(--prind-colour-3);
 }

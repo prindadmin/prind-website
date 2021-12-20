@@ -36,6 +36,10 @@
   width: 100%;
 }
 
+.page {
+  min-height: 100vh;
+}
+
 .button {
   --button-height: 39px;
   height: var(--button-height);

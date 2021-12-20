@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 import * as STRINGS from '../../Data/Strings'
 import * as ENDPOINTS from '../../Data/Endpoints'
 import { MOBILE_BREAK_WIDTH } from '../../Data/Constants'
-import classes from './Hero.module.css'
+import classes from './ArrangeDemo.module.css'
 
 // TODO: Add prop to accept an array of images and have them rotate through
 
-export class Hero extends Component {
+export class ArrangeDemo extends Component {
   static propTypes = {
     screenDimensions: PropTypes.shape({
       width: PropTypes.number.isRequired,
@@ -51,8 +51,8 @@ export class Hero extends Component {
         'url(/images/elements/strings-cropped.png)'
       ],
       backgroundRepeat: 'no-repeat',
-      backgroundSize: '65vw 120%',
-      backgroundPosition: 'left 38vw top 0px'
+      backgroundSize: '100vw 120%',
+      backgroundPosition: 'left -30vw top 0px'
     }
   }
 
@@ -72,22 +72,12 @@ export class Hero extends Component {
             )}/>
           </div>
 
-          <div className={classes.textContainer}>
-            <h1 className={classes.titleOne}>{STRINGS.HERO_TITLE_ONE}</h1>
-            <h1>{STRINGS.HERO_TITLE_TWO}</h1>
-            <div className='spacer' style={{ height: '32px' }} />
-            <h2>{STRINGS.HERO_SUBTITLE}</h2>
-            <div className='spacer' style={{ height: '32px' }} />
-            <div className={classes.buttonContainer}>
-              <Route render={({ history }) => (
-                <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
-              )}/>
-              {
-                this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
-                this.headerLogInButton() :
-                null
-              }
+          <div className={classes.formContainer}>
+
+            <div className={classes.formBox}>
+              <h2>{STRINGS.ARRANGE_A_DEMO}</h2>
             </div>
+
           </div>
         </div>
 
@@ -96,4 +86,4 @@ export class Hero extends Component {
   }
 }
 
-export default Hero
+export default ArrangeDemo

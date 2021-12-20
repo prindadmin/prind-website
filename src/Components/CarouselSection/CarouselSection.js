@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import { MOBILE_BREAK_WIDTH } from '../../Data/Constants'
 import * as STRINGS from '../../Data/Strings'
+import * as ENDPOINTS from '../../Data/Endpoints'
 import classes from './CarouselSection.module.css'
 
 const REASONS = [
@@ -124,7 +126,9 @@ export class CarouselSection extends Component {
 
           {
             this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
-            <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo'/> :
+            <Route render={({ history }) => (
+              <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
+            )}/> :
             null
           }
 

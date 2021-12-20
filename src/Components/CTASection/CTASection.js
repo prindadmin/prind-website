@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 //import * as STRINGS from '../../Data/Strings'
+import * as ENDPOINTS from '../../Data/Endpoints'
 import classes from './CTASection.module.css'
 
 
@@ -27,7 +29,9 @@ export class CTASection extends Component {
             <p>{this.props.body}</p>
           </div>
 
-          <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value={this.props.ctaButton}/>
+          <Route render={({ history }) => (
+            <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
+          )}/>
         </div>
 
       </div>
