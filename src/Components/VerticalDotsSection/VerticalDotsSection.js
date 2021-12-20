@@ -2,7 +2,9 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import * as STRINGS from '../../Data/Strings'
+import { IMAGE_BREAK_WIDTH } from '../../Data/Constants'
 import classes from './VerticalDotsSection.module.css'
+
 
 const POINTS = [
   {
@@ -29,6 +31,30 @@ export class VerticalDotsSection extends Component {
     }).isRequired
   }
 
+  getImage = () => {
+    if (this.props.screenDimensions.width > IMAGE_BREAK_WIDTH) {
+
+      const imageContainerStyle = {
+        width: '45%',
+        position: 'absolute',
+        top: '0',
+        right: '0',
+        bottom: '0'
+      }
+
+      return (
+        <div className={classes.featureImageBig} style={imageContainerStyle}>
+          <img src='/images/sidebyside/construction-worker.jpg' alt='' />
+        </div>
+      )
+    }
+    return (
+      <div className={classes.featureImage}>
+        <img src='/images/sidebyside/construction-worker.jpg' alt='' />
+      </div>
+    )
+  }
+
 
   getPoints = () => {
     return POINTS.map((feature, index) => {
@@ -52,19 +78,21 @@ export class VerticalDotsSection extends Component {
       <div id='component-vertical-dots-section' className={`full-width ${classes.sectionComponent}`}>
 
         <div className={classes.contentContainer}>
-          <div className={classes.headingBlock}>
-            <h2>{this.props.title}</h2>
+          <div className={classes.textContainer}>
+            <div className={classes.headingBlock}>
+              <h2>{this.props.title}</h2>
+            </div>
+
+            <div className={classes.featuresHolder}>
+              {
+                this.getPoints()
+              }
+            </div>
           </div>
 
-          <div className={classes.featuresHolder}>
-            {
-              this.getPoints()
-            }
-          </div>
-
-          <div className={classes.featureImage}>
-            <img src='/images/sidebyside/construction-worker.jpg' alt='' />
-          </div>
+          {
+            this.getImage()
+          }
         </div>
 
       </div>

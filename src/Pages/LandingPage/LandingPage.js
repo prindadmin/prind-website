@@ -18,6 +18,8 @@ import HeroSection from '../../Components/Hero'
 import FeaturesSection from '../../Components/FeaturesSection'
 import VerticalDotsSection from '../../Components/VerticalDotsSection'
 import CarouselSection from '../../Components/CarouselSection'
+import CTASection from '../../Components/CTASection'
+import FooterBar from '../../Components/FooterBar'
 //import FeatureCircles from '../../Components/FeatureCircles'
 //import SideBySide from '../../Components/SideBySide'
 //import HeadlineNumbers from '../../Components/HeadlineNumbers'
@@ -78,6 +80,16 @@ export class LandingPage extends Component {
           reference='reasons'
           title={STRINGS.REASONS_TITLE}
           body={STRINGS.REASONS_BODY}
+          screenDimensions={ this.state.screenDimensions }
+        />
+        <CTASection
+          reference='cta'
+          title={STRINGS.CTA_SECTION_TITLE}
+          body={STRINGS.CTA_SECTION_BODY}
+          ctaButton={STRINGS.CTA_SECTION_BUTTON_TEXT}
+          screenDimensions={ this.state.screenDimensions }
+        />
+        <FooterBar
           screenDimensions={ this.state.screenDimensions }
         />
       </div>

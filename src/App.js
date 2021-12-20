@@ -10,9 +10,6 @@ import LandingPage from './Pages/LandingPage'
 import ProcoreSupportPage from './Pages/ProcoreSupportPage'
 import SupportArticlePage from './Pages/SupportArticlePage'
 
-// Component Imports
-import FooterBar from './Components/FooterBar'
-
 // Library Imports
 import ReactGA from 'react-ga';
 
@@ -66,7 +63,6 @@ class App extends Component {
               <Route path={`${Endpoints.PROCORESUPPORTPAGE}/:id`} component={ SupportArticlePage } />
               <Route component={ LandingPage } />
             </Switch>
-            <FooterBar />
           </div>
         </div>
       </Router>

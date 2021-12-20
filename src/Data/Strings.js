@@ -35,9 +35,9 @@ export const REASONS_REASON_ONE_BODY = "CDM compliance is made simple - our inte
 export const REASONS_REASON_TWO_BODY = "No more gaps in information - Prin-D provides prompts to the user where relevant information is required."
 export const REASONS_REASON_THREE_BODY = "All compliance information in one place - Prin-D retains all relevant information throughout the Whole Asset Lifecycle in a structured framework."
 
-
-
-
+export const CTA_SECTION_TITLE = "Arrange a Demo"
+export const CTA_SECTION_BODY = "To find out more please contact us, one of our team will be pleased to contact you to provide a demonstration and answer any questions."
+export const CTA_SECTION_BUTTON_TEXT = "Arrange a Demo"
 
 
 export const SIDEBYSIDE_ONE_TITLE = "A Changing Industry"

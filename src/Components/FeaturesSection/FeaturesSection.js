@@ -64,9 +64,9 @@ export class FeaturesSection extends Component {
 
   render () {
     return (
-      <div id='component-features-section' className={`full-width ${classes.featuresSectionComponent}`}>
+      <div id='component-features-section' className={`full-width ${classes.sectionComponent}`}>
 
-        <div className={classes.featuresContentContainer}>
+        <div className={classes.contentContainer}>
           <div className={classes.headingBlock}>
             <h2>{this.props.title}</h2>
             <p>{this.props.body}</p>

@@ -1,7 +1,8 @@
 
 :root {
   --footer-bar-height: 125px;
-  --standard-max-width: 1400px;
+  --standard-max-width: 1340px;
+  --standard-max-width-text-section: 1100px;
   --colour-4: rgba(192,192,192,1);
   --prind-colour-1: #131419;
   --prind-colour-2: #DCC394;
@@ -105,7 +106,7 @@ h2 {
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 44px;
     line-height: 130%;
   }
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import { MOBILE_BREAK_WIDTH } from '../../Data/Constants'
 import * as STRINGS from '../../Data/Strings'
 import classes from './CarouselSection.module.css'
 
@@ -30,8 +31,20 @@ export class CarouselSection extends Component {
   constructor() {
     super()
     this.state = {
-      currentItem: 1
+      currentItem: 0,
+      carouselBoxWidth: 500
     }
+  }
+
+  componentDidUpdate(prevProps) {
+    let carouselbox = document.getElementById('carouselbox');
+    if (!carouselbox) {
+      return
+    }
+    if (this.state.carouselBoxWidth === carouselbox.offsetWidth) { return }
+    this.setState({
+      carouselBoxWidth: carouselbox.offsetWidth
+    })
   }
 
   onChangeItem = (changeCountBy) => {
@@ -58,29 +71,47 @@ export class CarouselSection extends Component {
     })
   }
 
-  getReasons = () => {
+  getItemHolder = () => {
 
-    // These numbers will have to be calculated rather than hard coded
-    const CAROUSEL_ITEM_WIDTH = 500
-    const CAROUSEL_ITEM_HOLDER_WIDTH = 354
+    const CAROUSEL_ITEM_WIDTH = this.state.carouselBoxWidth
+    const CAROUSEL_ITEM_HOLDER_WIDTH = CAROUSEL_ITEM_WIDTH > 760 ? 700 : CAROUSEL_ITEM_WIDTH - 60
+    const currentItemOffset = {
+      startOfReason: CAROUSEL_ITEM_WIDTH * this.state.currentItem,
+      centerPosition: 0
+    }
+
+    const carouselBoxStyle = {
+      gridAutoColumns: `${CAROUSEL_ITEM_WIDTH}px`,
+      transform: `translateX(-${currentItemOffset.startOfReason + currentItemOffset.centerPosition}px)`,
+      transition: 'all 250ms'
+    }
 
     return (
-      <div className={classes.reasonsGrid} style={{ transform: `translateX(-${(CAROUSEL_ITEM_WIDTH * this.state.currentItem) + (CAROUSEL_ITEM_WIDTH - CAROUSEL_ITEM_HOLDER_WIDTH) / 2}px)`, transition: 'all 250ms' }}>
-        {
-          REASONS.map((feature, index) => {
-            return (
-              <div key={index} className={classes.featureTile} style={{ margin: '0 auto', width: CAROUSEL_ITEM_HOLDER_WIDTH }}>
-                <h4>{`Reason ${index + 1}`}</h4>
-                <p>{feature.body}</p>
-              </div>
-            )
-          })
-        }
+      <div id='carouselbox' className={classes.itemHolder}>
+        <div className={classes.reasonsGrid} style={carouselBoxStyle}>
+          {
+            REASONS.map((feature, index) => {
+              return (
+                <div key={index} className={classes.featureTile} style={{ margin: '0 auto', width: CAROUSEL_ITEM_HOLDER_WIDTH }}>
+                  <h4>{`Reason ${index + 1}`}</h4>
+                  <p>{feature.body}</p>
+                </div>
+              )
+            })
+          }
+        </div>
       </div>
     )
   }
 
-  // TODO: Continue here; add the controls
+  getLeftControl = () => {
+    return <div className={classes.controlButton} onClick={(e) => { this.onChangeItem(-1) }}><img src='/images/icons/union-left.svg' alt='left' /></div>
+  }
+
+  getRightControl = () => {
+    return <div className={classes.controlButton} onClick={(e) => { this.onChangeItem(1) }}><img src='/images/icons/union-right.svg' alt='right' /></div>
+  }
+
   render () {
     return (
       <div id='component-carousel-section' className={`full-width ${classes.sectionComponent}`}>
@@ -91,15 +122,31 @@ export class CarouselSection extends Component {
             <p>{this.props.body}</p>
           </div>
 
+          {
+            this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
+            <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo'/> :
+            null
+          }
+
           <div className={classes.carouselHolder}>
-            <div className={classes.itemHolder}>
-              {
-                this.getReasons()
-              }
-            </div>
-            <div className={classes.controlHolder} onClick={(e) => { this.onChangeItem(1) }}>
-              Test.....
-            </div>
+            {
+              this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ? this.getLeftControl() : null
+            }
+            {
+              this.getItemHolder()
+            }
+            {
+              this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ? this.getRightControl() : null
+            }
+            {
+              !this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
+              <div className={classes.controlHolder}>
+                { this.getLeftControl() }
+                <div className='spacer' />
+                { this.getRightControl() }
+              </div> :
+              null
+            }
           </div>
         </div>
 
