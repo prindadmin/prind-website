@@ -7,6 +7,7 @@ import { Endpoints } from './Data'
 
 // Page Imports
 import LandingPage from './Pages/LandingPage'
+import ArrangeDemoPage from './Pages/ArrangeDemoPage'
 import ProcoreSupportPage from './Pages/ProcoreSupportPage'
 import SupportArticlePage from './Pages/SupportArticlePage'
 
@@ -61,6 +62,7 @@ class App extends Component {
               <Route exact path='/' component={ LandingPage } />
               <Route exact path='/procore-support' component={ ProcoreSupportPage } />
               <Route path={`${Endpoints.PROCORESUPPORTPAGE}/:id`} component={ SupportArticlePage } />
+              <Route path={`${Endpoints.ARRANGEDEMO}`} component={ ArrangeDemoPage } />
               <Route component={ LandingPage } />
             </Switch>
           </div>

@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 import * as STRINGS from '../../Data/Strings'
+import * as ENDPOINTS from '../../Data/Endpoints'
 import { MOBILE_BREAK_WIDTH } from '../../Data/Constants'
 import classes from './Hero.module.css'
 
@@ -63,7 +65,9 @@ export class Hero extends Component {
           <div className={classes.topRow}>
             <img src='/images/logos/prin-d-logo-white.png' alt='' className={classes.logoImage} />
             { this.headerLogInButton() }
-            <input type='submit' className={`button primary ${classes.arrangeDemoButtonTopRow}`} value='Arrange a demo'/>
+            <Route render={({ history }) => (
+              <input type='submit' className={`button primary ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
+            )}/>
           </div>
 
           <div className={classes.textContainer}>
@@ -73,7 +77,9 @@ export class Hero extends Component {
             <h2>{STRINGS.HERO_SUBTITLE}</h2>
             <div className='spacer' style={{ height: '32px' }} />
             <div className={classes.buttonContainer}>
-              <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo'/>
+              <Route render={({ history }) => (
+                <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
+              )}/>
               {
                 this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
                 this.headerLogInButton() :

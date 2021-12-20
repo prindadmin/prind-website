@@ -13,7 +13,7 @@ import CarouselSection from '../../Components/CarouselSection'
 import CTASection from '../../Components/CTASection'
 import FooterBar from '../../Components/FooterBar'
 
-export class LandingPage extends Component {
+export class ArrangeDemoPage extends Component {
 
   constructor() {
     super()
@@ -45,6 +45,8 @@ export class LandingPage extends Component {
       }
     });
   }
+
+  // TODO: Build this page
 
   render () {
     return (
@@ -85,4 +87,4 @@ export class LandingPage extends Component {
   }
 }
 
-export default LandingPage
+export default ArrangeDemoPage
