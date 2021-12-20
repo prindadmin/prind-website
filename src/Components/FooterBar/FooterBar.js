@@ -6,6 +6,7 @@ import classes from './FooterBar.module.css'
 //import SocialLinks from '../SocialLinks'
 
 // Data
+import { MOBILE_BREAK_WIDTH } from '../../Data/Constants'
 import * as STRINGS from '../../Data/Strings'
 import FooterLinkData from '../../Data/FooterLinkData'
 
@@ -32,12 +33,31 @@ export class FooterBar extends Component {
     return (
       <div id='component-footer-section' className={`full-width ${classes.sectionComponent}`}>
         <div className={classes.contentContainer}>
-          <img src='/images/logos/prin-d-logo-white.png' alt='' className={classes.logoImage} />
-          <h2>{STRINGS.HERO_SUBTITLE}</h2>
-          <img src="/images/logos/RICS-TECH-PARTNER-LOGO.jpg" alt="RICS Logo"className={classes.ricsLogo} />
-          <div className={classes.legalArea}>
-            { STRINGS.COPYRIGHT_TEXT.replace("YEARPLACEHOLDER", (new Date()).getFullYear()) }
+          <div className={classes.leftText}>
+            <img src='/images/logos/prin-d-logo-white.png' alt='' className={classes.logoImage} />
+            <h2>{STRINGS.HERO_SUBTITLE}</h2>
+            {
+              this.props.screenDimensions.width <= MOBILE_BREAK_WIDTH ?
+              <img src="/images/logos/RICS-TECH-PARTNER-LOGO.jpg" alt="RICS Logo"className={classes.ricsLogo} /> :
+              null
+            }
+            <div className={classes.legalArea}>
+              { STRINGS.COPYRIGHT_TEXT.replace("YEARPLACEHOLDER", (new Date()).getFullYear()) }
+            </div>
+            {
+              this.props.screenDimensions.width <= MOBILE_BREAK_WIDTH ?
+              <p>Website by <a href='https://www.clixels.co.uk/'>Clixels</a></p> :
+              null
+            }
           </div>
+          {
+            this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
+            <div className={classes.rightText}>
+              <img src="/images/logos/RICS-TECH-PARTNER-LOGO.jpg" alt="RICS Logo"className={classes.ricsLogo} />
+              <p>Website by <a href='https://www.clixels.co.uk/'>Clixels</a></p>
+            </div> :
+            null
+          }
         </div>
       </div>
     )

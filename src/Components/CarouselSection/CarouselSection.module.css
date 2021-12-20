@@ -1,7 +1,6 @@
 
 .sectionComponent {
   max-width: 100vw;
-  margin-bottom: 60px;
 }
 
 @media (min-width: 800px) {
@@ -12,16 +11,19 @@
   max-width: var(--standard-max-width);
   margin: 0 30px;
   text-align: center;
+  padding-bottom: 60px;
 }
 
 @media (min-width: 800px) {
   .contentContainer {
+    padding: 60px;
   }
 }
 
 @media (min-width: 1400px) {
   .contentContainer {
     margin: 0 auto;
+    padding: 200px;
   }
 }
 
@@ -66,7 +68,6 @@
 }
 
 .carouselHolder {
-  margin-bottom: 60px;
 }
 
 @media (min-width: 800px) {

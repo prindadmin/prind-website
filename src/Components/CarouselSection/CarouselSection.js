@@ -74,7 +74,7 @@ export class CarouselSection extends Component {
   getItemHolder = () => {
 
     const CAROUSEL_ITEM_WIDTH = this.state.carouselBoxWidth
-    const CAROUSEL_ITEM_HOLDER_WIDTH = CAROUSEL_ITEM_WIDTH > 760 ? 700 : CAROUSEL_ITEM_WIDTH - 60
+    const CAROUSEL_ITEM_HOLDER_WIDTH = CAROUSEL_ITEM_WIDTH > 700 ? 700 : CAROUSEL_ITEM_WIDTH
     const currentItemOffset = {
       startOfReason: CAROUSEL_ITEM_WIDTH * this.state.currentItem,
       centerPosition: 0
@@ -130,16 +130,16 @@ export class CarouselSection extends Component {
 
           <div className={classes.carouselHolder}>
             {
-              this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ? this.getLeftControl() : null
+              this.props.screenDimensions.width >= MOBILE_BREAK_WIDTH ? this.getLeftControl() : null
             }
             {
               this.getItemHolder()
             }
             {
-              this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ? this.getRightControl() : null
+              this.props.screenDimensions.width >= MOBILE_BREAK_WIDTH ? this.getRightControl() : null
             }
             {
-              !this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
+              this.props.screenDimensions.width < MOBILE_BREAK_WIDTH ?
               <div className={classes.controlHolder}>
                 { this.getLeftControl() }
                 <div className='spacer' />

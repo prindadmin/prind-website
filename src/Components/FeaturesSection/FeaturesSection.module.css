@@ -11,18 +11,20 @@
   max-width: var(--standard-max-width);
   margin: 0 30px;
   text-align: left;
-  z-index: 100;
+  padding: 0;
 }
 
 @media (min-width: 800px) {
   .contentContainer {
     text-align: center;
+    padding: 100px;
   }
 }
 
 @media (min-width: 1400px) {
   .contentContainer {
     margin: 0 auto;
+    padding: 200px;
   }
 }
 
@@ -51,6 +53,16 @@
 
 .headingBlock > p:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: 800px) {
+  .headingBlock > h2 {
+    font-size: 44px;
+  }
+
+  .headingBlock > p {
+    font-size: 24px;
+  }
 }
 
 .featuresHolder {
