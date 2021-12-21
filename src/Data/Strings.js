@@ -40,6 +40,10 @@ export const CTA_SECTION_BODY = "To find out more please contact us, one of our 
 export const CTA_SECTION_BUTTON_TEXT = "Arrange a Demo"
 
 export const ARRANGE_A_DEMO = "Arrange a Demo"
+export const FULLNAME = "Full Name"
+export const COMPANYNAME = "Company Name"
+export const EMAILADDRESS = "Email Address"
+
 
 
 export const SIDEBYSIDE_ONE_TITLE = "A Changing Industry"

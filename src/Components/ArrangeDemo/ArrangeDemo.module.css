@@ -26,10 +26,11 @@
 .contentContainer {
   max-width: var(--standard-max-width);
   margin: 0 30px;
-  text-align: left;
+  text-align: center;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  color: var(--prind-colour-3);
 }
 
 .contentContainer a:link,
@@ -37,7 +38,6 @@
 .contentContainer a:hover,
 .contentContainer a:active {
   color: var(--prind-colour-3);
-  text-decoration: none;
 }
 
 @media (min-width: 1400px) {
@@ -98,7 +98,13 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  margin: auto;
+  margin: 30px auto;
+}
+
+@media (min-width: 800px) {
+  .formContainer {
+    margin: 62px auto;
+  }
 }
 
 .formBox {
@@ -107,6 +113,11 @@
   overflow: hidden;
   margin: 0 auto;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 27px;
+  background-color: var(--prind-colour-1);
+  max-width: 390px;
 }
 
 .formBox > h2 {
@@ -116,4 +127,74 @@
   line-height: 130%;
   text-align: center;
   color: var(--prind-colour-3);
+}
+
+.formBox > label {
+  color: var(--prind-colour-3);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.formBox > input[type=text],
+.formBox > input[type=email] {
+  background: var(--prind-colour-3);
+  padding: 0 20px;
+  border-radius: 30px;
+  height: 57px;
+  margin-bottom: 21px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.formBox > input[type=text]:disabled,
+.formBox > input[type=email]:disabled {
+  background-color: #aaaaaa80;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  margin-top: 14px;
+  height: 57px;
+  padding: 0 2em;
+  border-radius: 30px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 105%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.privacyText {
+  margin: 0 auto auto auto;
+  width: 100%;
+  max-width: 350px;
+}
+
+.submitButton:disabled {
+  background-color: #aaaaaa80;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.errorSubmittingText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+}
+
+.successSubmittingText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
 }

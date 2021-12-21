@@ -17,6 +17,17 @@ export class ArrangeDemo extends Component {
     }).isRequired
   }
 
+  constructor() {
+    super()
+    this.state = {
+      fullName: '',
+      companyName: '',
+      emailAddress: '',
+      submitting: false,
+      submissionError: false,
+      submittedSuccessfully: false,
+    }
+  }
 
   headerLogInButton = () => {
     if (this.props.screenDimensions.width > MOBILE_BREAK_WIDTH) {
@@ -56,6 +67,61 @@ export class ArrangeDemo extends Component {
     }
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.id]: event.target.value
+    });
+  }
+
+
+  submitContactUs = (e) => {
+
+    this.setState({
+      submitting: true,
+      submissionError: false,
+      submittedSuccessfully: false,
+    })
+
+    const parameters = {
+      fullName: this.state.fullName,
+      companyName: this.state.companyName,
+      emailAddress: this.state.emailAddress
+    }
+
+    // Submit to endpoint
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", process.env.REACT_APP_CONTACT_US_URL, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.send(JSON.stringify(parameters));
+
+    xhr.onerror = () => {
+      this.setState({
+        submitting: false,
+        submissionError: true,
+        submittedSuccessfully: false,
+      })
+    };
+
+    xhr.onloadend = () => {
+    	if (xhr.status >= 200 && xhr.status < 300) {
+    		// What do when the request is successful
+    		this.setState({
+          submitting: true,
+          submissionError: false,
+          submittedSuccessfully: true,
+        })
+        return;
+    	};
+
+      this.setState({
+        submitting: true,
+        submissionError: true,
+        submittedSuccessfully: false,
+      })
+
+    };
+  }
+
 
   render () {
 
@@ -65,7 +131,9 @@ export class ArrangeDemo extends Component {
 
         <div className={classes.contentContainer}>
           <div className={classes.topRow}>
-            <img src='/images/logos/prin-d-logo-white.png' alt='' className={classes.logoImage} />
+            <Route render={({ history }) => (
+              <img src='/images/logos/prin-d-logo-white.png' alt='' className={classes.logoImage} onClick={() => { history.push(ENDPOINTS.DEFAULTPAGE) }}/>
+            )}/>
             { this.headerLogInButton() }
             <Route render={({ history }) => (
               <input type='submit' className={`button primary ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
@@ -76,9 +144,33 @@ export class ArrangeDemo extends Component {
 
             <div className={classes.formBox}>
               <h2>{STRINGS.ARRANGE_A_DEMO}</h2>
+              <label for='fullName'>{STRINGS.FULLNAME}</label>
+              <input id='fullName' type='text' value={this.state.fullName} onChange={this.handleChange} disabled={this.state.submitting}/>
+
+              <label for='companyName'>{STRINGS.COMPANYNAME}</label>
+              <input id='companyName' type='text' value={this.state.companyName} onChange={this.handleChange} disabled={this.state.submitting}/>
+
+              <label for='emailAddress'>{STRINGS.EMAILADDRESS}</label>
+              <input id='emailAddress' type='email' value={this.state.emailAddress} onChange={this.handleChange} disabled={this.state.submitting}/>
+
+              {
+                this.state.submissionError ? <p className={classes.errorSubmittingText}>{STRINGS.FORM_ERROR_SUBMITTING}</p> : null
+              }
+
+              {
+                this.state.submittedSuccessfully ? <p className={classes.successSubmittingText}>{STRINGS.FORM_SUBMISSION_SUCCESSFUL}</p> : null
+              }
+
+              <button type='submit' className={`button secondary ${classes.submitButton}` } onClick={this.submitContactUs} disabled={this.state.submitting}>
+                { STRINGS.ARRANGE_A_DEMO }
+              </button>
+
             </div>
 
           </div>
+
+          <p className={classes.privacyText}>By entering your details above, you are agreeing to our <a href=''>Privacy Policy</a></p>
+
         </div>
 
       </div>

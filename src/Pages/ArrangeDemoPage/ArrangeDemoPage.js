@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 // Tools
 import ReactGA from 'react-ga';
 
-import * as STRINGS from '../../Data/Strings'
+//import * as STRINGS from '../../Data/Strings'
 
 // Components
 import ArrangeDemo from '../../Components/ArrangeDemo'
