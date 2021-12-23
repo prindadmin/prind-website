@@ -42,7 +42,7 @@ export class ArrangeDemo extends Component {
         </button>
       )
     }
-    return <button className={`button secondary ${classes.logInButton}`} style={{ width:'39px', padding: '13px'}}><img src='/images/icons/login.svg' alt='Log in' /></button>
+    return <button className={`button secondary ${classes.logInButton}`} style={{ width:'39px', padding: '13px'}}><a href='https://portal.prind.tech'><img src='/images/icons/login.svg' alt='Log in' /></a></button>
   }
 
   heroBackground = () => {
