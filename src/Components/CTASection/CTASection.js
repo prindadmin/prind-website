@@ -28,6 +28,7 @@ export class CTASection extends Component {
             <h2>{this.props.title}</h2>
             <p>{this.props.body}</p>
           </div>
+          <div className='spacer' style={{ height: '10px' }} />
 
           <Route render={({ history }) => (
             <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>

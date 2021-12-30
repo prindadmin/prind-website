@@ -23,14 +23,14 @@
     display: grid;
     grid-template-columns: 5fr 5fr;
     grid-column-gap: 50px;
-    padding-top: 124px;
-    padding-bottom: 124px;
+    padding: 124px 100px;
   }
 }
 
 @media (min-width: 1400px) {
   .contentContainer {
     margin: 0 auto;
+    padding: 124px 200px;
   }
 }
 
@@ -99,6 +99,16 @@
   margin-bottom: 96px;
 }
 
+@media (min-width: 800px) {
+  .featureTile > .textHolder > h4 {
+    font-size: 30px;
+  }
+
+  .featureTile > .textHolder > p {
+    font-size: 22px;
+  }
+}
+
 
 .lineHolder {
   --holder-width: 30px;
@@ -150,7 +160,7 @@
   object-fit: cover;
   object-position: left;
   transform: scale(2) translateX(25%);
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 @media (min-width: 800px) {
@@ -165,5 +175,5 @@
   object-fit: cover;
   object-position: left;
   transform: scale(1);
-  opacity: 60%;
+  opacity: 0.6;
 }

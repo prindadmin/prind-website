@@ -67,10 +67,7 @@ export class HeaderBar extends Component {
   }
 
   getLogoSrc = () => {
-    if (this.state.width < MOBILE_BREAKPOINT) {
-      return "/images/logos/prind-tech-icon-blue.png"
-    }
-    return "/images/logos/prind-tech-logo-white-text.png"
+    return "/images/logos/prind-tech-logo-white-text.svg"
   }
 
   render () {

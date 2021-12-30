@@ -8,6 +8,8 @@
   --prind-colour-2: #DCC394;
   --prind-colour-3: #F5F1EC;
   --prind-colour-4: #0F1014;
+  --prind-offwhite: darken(white, 10%);
+  --prind-darkblue: rgb(50,50,60);
 }
 
 #root {
@@ -53,6 +55,7 @@
   align-items: center;
   padding: 10px 14px;
   margin-right: 13px;
+  position: relative;
 }
 
 @media (min-width: 800px) {
@@ -85,6 +88,61 @@
 .button.big {
   --button-height: 55px !important;
 }
+
+/*
+.button-bubble {
+  color: darken(var(--prind-darkblue), 10%) !important;
+  border: none !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.button-bubble:hover {
+  color: var(--prind-offwhite) !important;
+}
+
+.button-bubble::before {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 3px solid darken(var(--prind-darkblue), 10%) !important;
+  transition: opacity 0.3s, border 0.3s !important;
+}
+
+.button-bubble:hover::before {
+  opacity: 0 !important;
+}
+
+.button-bubble::after {
+  content: "";
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 200px !important;
+  height: 200px !important;
+  background-color: white !important;
+  border-color: transparent !important;
+  border-radius: 50% !important;
+  transform: translate(-10px, -70px) scale(0.1) !important;
+  opacity: 0 !important;
+  z-index: 2 !important;
+  transition: transform 0.3s, opacity 0.3s, background-color 0.3s !important;
+}
+
+.button-bubble:hover::after {
+  opacity: 1 !important;
+  transform-origin: 100px 100px !important;
+  transform: scale(1) translate(-10px, -70px) !important;
+}
+*/
+
+input {
+  border: none;
+}
+
 
 h1 {
   font-style: normal;

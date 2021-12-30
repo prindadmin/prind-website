@@ -21,7 +21,7 @@ export class Hero extends Component {
   headerLogInButton = () => {
     if (this.props.screenDimensions.width > MOBILE_BREAK_WIDTH) {
       return (
-        <button type='submit' className={`button secondary ${classes.logInButton}` } style={{ padding: '0 2em'}}>
+        <button type='submit' className={`button-bubble button secondary ${classes.logInButton}`} style={{ padding: '0 2em'}}>
           <a href='https://portal.prind.tech'>
             <span>
               Log in
@@ -65,7 +65,7 @@ export class Hero extends Component {
 
         <div className={classes.contentContainer}>
           <div className={classes.topRow}>
-            <img src='/images/logos/prin-d-logo-white.png' alt='' className={classes.logoImage} />
+            <img src='/images/logos/prin-d-logo-white.svg' alt='' className={classes.logoImage} />
             { this.headerLogInButton() }
             <Route render={({ history }) => (
               <input type='submit' className={`button primary ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>
@@ -77,7 +77,7 @@ export class Hero extends Component {
             <h1>{STRINGS.HERO_TITLE_TWO}</h1>
             <div className='spacer' style={{ height: '32px' }} />
             <h2>{STRINGS.HERO_SUBTITLE}</h2>
-            <div className='spacer' style={{ height: '32px' }} />
+            <div className='spacer' style={{ height: '42px' }} />
             <div className={classes.buttonContainer}>
               <Route render={({ history }) => (
                 <input type='submit' className={`button primary big ${classes.arrangeDemoButton}`} value='Arrange a demo' onClick={() => { history.push(ENDPOINTS.ARRANGEDEMO) }}/>

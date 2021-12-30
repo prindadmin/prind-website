@@ -1,6 +1,7 @@
 
 .sectionComponent {
   max-width: 100vw;
+  background-color: var(--prind-colour-4);
 }
 
 @media (min-width: 800px) {

@@ -123,7 +123,7 @@ export class CarouselSection extends Component {
             <h2>{this.props.title}</h2>
             <p>{this.props.body}</p>
           </div>
-
+          <div className='spacer' style={{ height: '8px' }} />
           {
             this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
             <Route render={({ history }) => (

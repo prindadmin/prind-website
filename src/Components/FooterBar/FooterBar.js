@@ -54,7 +54,7 @@ export class FooterBar extends Component {
             this.props.screenDimensions.width > MOBILE_BREAK_WIDTH ?
             <div className={classes.rightText}>
               <img src="/images/logos/RICS-TECH-PARTNER-LOGO.jpg" alt="RICS Logo"className={classes.ricsLogo} />
-              <p>Website by <a href='https://www.clixels.co.uk/'>Clixels</a></p>
+              <p>Website Design by <a href='https://www.clixels.co.uk/'>Clixels</a></p>
             </div> :
             null
           }
