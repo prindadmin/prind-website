@@ -90,6 +90,7 @@
 
 .featureTile {
   margin: 0;
+  text-align: left;
 }
 
 .featureTile > h4 {
